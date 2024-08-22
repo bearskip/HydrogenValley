@@ -1,0 +1,9 @@
+- stage:
+    id: S1
+    name: S1
+    params:
+      start_year: 2050
+      length: 1
+      CO2_price: 0.175 #[CHF/kgCO2]175 CHF/tCO2
+      CO2_min: 0 #-200_000_000 #Could be reached via CO2 capture from Tegra 200kt/a
+      CO2_max: 0

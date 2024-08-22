@@ -1,0 +1,696 @@
+### Stage 1
+- stage:
+    id: S1
+ ######### Imports #########
+ ### H1 Mitte / Chur
+    import_hubs:
+    - hub:
+        id: H1
+        import_ecs:
+    # Grid electricity
+            - ec: #El13
+                id: El13
+                hourly_profiles: import_profiles/I_Cross_Electricity_El13.csv
+    # Wood
+            - ec: #Wood
+                id: Wood
+                hourly_profiles:
+                default_co2: 0
+                default_price: 0.047
+                default_primary_energy_fraction: 1
+                default_min_cap: 0
+                default_max_cap: #inf
+                max_annual: 50_000_000
+    # Methane
+            - ec: #Ch4SynEu
+                id: Ch4SynEu
+                hourly_profiles:
+                default_co2: 0
+                default_price: 0.098
+                default_primary_energy_fraction: 1
+                default_min_cap: 0
+                default_max_cap: #inf
+                max_annual: #inf
+            - ec: #Ch4BioCh
+                id: Ch4BioCh
+                hourly_profiles:
+                default_co2: 0
+                default_price: 0.132
+                default_primary_energy_fraction: 1
+                default_min_cap: 0
+                default_max_cap: #inf
+                max_annual: #inf
+    # Hydrocarbons Liquid
+            - ec: #C12
+                id: C12
+                hourly_profiles:
+                default_co2: 0.265
+                default_price: 0.080
+                default_primary_energy_fraction: 1
+                default_min_cap: 0
+                default_max_cap: #inf
+                max_annual: #inf
+            - ec: #C8
+                id: C8
+                hourly_profiles:
+                default_co2: 0.266
+                default_price: 0.079
+                default_primary_energy_fraction: 1
+                default_min_cap: 0
+                default_max_cap: #inf
+                max_annual: #inf
+    # Solar irradiation
+            - ec:
+                id: SolFlat
+                default_co2: 0
+                default_price: 0
+            - ec:
+                id: SolN
+                default_co2: 0
+                default_price: 0
+            - ec:
+                id: SolNe
+                default_co2: 0
+                default_price: 0
+            - ec:
+                id: SolE
+                default_co2: 0
+                default_price: 0
+            - ec:
+                id: SolSe
+                default_co2: 0
+                default_price: 0
+            - ec:
+                id: SolS
+                default_co2: 0
+                default_price: 0
+            - ec:
+                id: SolSw
+                default_co2: 0
+                default_price: 0
+            - ec:
+                id: SolW
+                default_co2: 0
+                default_price: 0
+            - ec:
+                id: SolNw
+                default_co2: 0
+                default_price: 0
+    # Ambient Heat
+            - ec: #ThAmb
+                id: ThAmb
+                hourly_profiles:
+                default_co2: 0
+                default_price: 0.000001
+                default_primary_energy_fraction: 1
+                default_min_cap: 0
+                default_max_cap: #inf
+                max_annual: #inf
+ ### H2 West / Domat-Ems
+    - hub:
+        id: H2
+        import_ecs:
+    # Grid electricity
+            - ec: #El13
+                id: El13
+                hourly_profiles: import_profiles/I_Cross_Electricity_El13.csv
+    # Wood
+            - ec: #Wood
+                id: Wood
+                hourly_profiles:
+                default_co2: 0
+                default_price: 0.047
+                default_primary_energy_fraction: 1
+                default_min_cap: 0
+                default_max_cap: #inf
+                max_annual: 50_000_000
+    # Methane
+            - ec: #Ch4SynEu
+                id: Ch4SynEu
+                hourly_profiles:
+                default_co2: 0
+                default_price: 0.098
+                default_primary_energy_fraction: 0.9 #Adapt
+                default_min_cap: 0
+                default_max_cap: #inf
+                max_annual: #inf
+            - ec: #Ch4BioCh
+                id: Ch4BioCh
+                hourly_profiles:
+                default_co2: 0
+                default_price: 0.132
+                default_primary_energy_fraction: 1
+                default_min_cap: 0
+                default_max_cap: #inf
+                max_annual: #inf
+    # Hydrocarbons Liquid
+            - ec: #C12
+                id: C12
+                hourly_profiles:
+                default_co2: 0.265
+                default_price: 0.080
+                default_primary_energy_fraction: 1
+                default_min_cap: 0
+                default_max_cap: #inf
+                max_annual: #inf
+            - ec: #C8
+                id: C8
+                hourly_profiles:
+                default_co2: 0.266
+                default_price: 0.079
+                default_primary_energy_fraction: 1
+                default_min_cap: 0
+                default_max_cap: #inf
+                max_annual: #inf
+    # Solar irradiation
+            - ec:
+                id: SolFlat
+                default_co2: 0
+                default_price: 0
+            - ec:
+                id: SolN
+                default_co2: 0
+                default_price: 0
+            - ec:
+                id: SolNe
+                default_co2: 0
+                default_price: 0
+            - ec:
+                id: SolE
+                default_co2: 0
+                default_price: 0
+            - ec:
+                id: SolSe
+                default_co2: 0
+                default_price: 0
+            - ec:
+                id: SolS
+                default_co2: 0
+                default_price: 0
+            - ec:
+                id: SolSw
+                default_co2: 0
+                default_price: 0
+            - ec:
+                id: SolW
+                default_co2: 0
+                default_price: 0
+            - ec:
+                id: SolNw
+                default_co2: 0
+                default_price: 0
+    # Ambient Heat
+            - ec: #ThAmb
+                id: ThAmb
+                hourly_profiles:
+                default_co2: 0
+                default_price: 0.000001
+                default_primary_energy_fraction: 1
+                default_min_cap: 0
+                default_max_cap: #inf
+                max_annual: #inf
+ ### H3 Nord / Landquart
+    - hub:
+        id: H3
+        import_ecs:
+    # Grid electricity
+            - ec: #El13
+                id: El13
+                hourly_profiles: import_profiles/I_Cross_Electricity_El13.csv
+    # Thermal Ground
+            - ec: #ThGround
+                id: ThGround
+                hourly_profiles:
+                default_co2: 0
+                default_price: 0 #Cost accounted for in Tech (ThGround -> ThPhII). 0.01 CHF/kWh
+                default_primary_energy_fraction: 1
+                default_min_cap: 0
+                default_max_cap: #inf
+                max_annual: #inf
+    # Wood
+            - ec: #Wood
+                id: Wood
+                hourly_profiles:
+                default_co2: 0
+                default_price: 0.047
+                default_primary_energy_fraction: 1
+                default_min_cap: 0
+                default_max_cap: #inf
+                max_annual: 50_000_000
+    # Methane
+            - ec: #Ch4SynEu
+                id: Ch4SynEu
+                hourly_profiles:
+                default_co2: 0
+                default_price: 0.098
+                default_primary_energy_fraction: 1
+                default_min_cap: 0
+                default_max_cap: #inf
+                max_annual: #inf
+            - ec: #Ch4BioCh
+                id: Ch4BioCh
+                hourly_profiles:
+                default_co2: 0
+                default_price: 0.132
+                default_primary_energy_fraction: 1
+                default_min_cap: 0
+                default_max_cap: #inf
+                max_annual: #inf
+    # Hydrocarbons Liquid
+            - ec: #C12
+                id: C12
+                hourly_profiles:
+                default_co2: 0.265
+                default_price: 0.080
+                default_primary_energy_fraction: 1
+                default_min_cap: 0
+                default_max_cap: #inf
+                max_annual: #inf
+            - ec: #C8
+                id: C8
+                hourly_profiles:
+                default_co2: 0.266
+                default_price: 0.079
+                default_primary_energy_fraction: 1
+                default_min_cap: 0
+                default_max_cap: #inf
+                max_annual: #inf
+    # Solar irradiation
+            - ec:
+                id: SolFlat
+                default_co2: 0
+                default_price: 0
+            - ec:
+                id: SolN
+                default_co2: 0
+                default_price: 0
+            - ec:
+                id: SolNe
+                default_co2: 0
+                default_price: 0
+            - ec:
+                id: SolE
+                default_co2: 0
+                default_price: 0
+            - ec:
+                id: SolSe
+                default_co2: 0
+                default_price: 0
+            - ec:
+                id: SolS
+                default_co2: 0
+                default_price: 0
+            - ec:
+                id: SolSw
+                default_co2: 0
+                default_price: 0
+            - ec:
+                id: SolW
+                default_co2: 0
+                default_price: 0
+            - ec:
+                id: SolNw
+                default_co2: 0
+                default_price: 0
+    # Ambient Heat
+            - ec: #ThAmb
+                id: ThAmb
+                hourly_profiles:
+                default_co2: 0
+                default_price: 0.000001
+                default_primary_energy_fraction: 1
+                default_min_cap: 0
+                default_max_cap: #inf
+                max_annual: #inf
+ ### H4 Gevag
+    - hub:
+        id: H4
+        import_ecs:
+    # Grid electricity
+            - ec: #El13
+                id: El13
+                hourly_profiles: import_profiles/I_Cross_Electricity_El13.csv
+    # Waste
+            - ec: #Msw
+                id: Msw
+                hourly_profiles: import_profiles/I_Cross_Waste_Msw.csv
+    # Hydrocarbons Liquid
+            - ec: #C12
+                id: C12
+                hourly_profiles:
+                default_co2: 0.265
+                default_price: 0.11
+                default_primary_energy_fraction: 1
+                default_min_cap: 0
+                default_max_cap: #inf
+                max_annual: #inf
+    # Methane
+            - ec: #Ch4SynEu
+                id: Ch4SynEu
+                hourly_profiles:
+                default_co2: 0
+                default_price: 0.098
+                default_primary_energy_fraction: 1
+                default_min_cap: 0
+                default_max_cap: #inf
+                max_annual: #inf
+
+            - ec: #Ch4BioCh
+                id: Ch4BioCh
+                hourly_profiles:
+                default_co2: 0
+                default_price: 0.132
+                default_primary_energy_fraction: 1
+                default_min_cap: 0
+                default_max_cap: #inf
+                max_annual: #inf
+ ### H5 Holcim
+    - hub:
+        id: H5
+        import_ecs:
+    # Grid electricity
+            - ec: #El13
+                id: El13
+                hourly_profiles: import_profiles/I_Cross_Electricity_El13.csv
+    # Limestone cement [kg]
+            - ec: #CaCO3 [kg]
+                id: CaCO3
+                hourly_profiles:
+                default_co2: 0.415 # 505 kg / 1000 kg Clinker. Limestone/Clinker ration: 450/547.
+                default_price: 0.03
+                default_primary_energy_fraction: 0
+                default_min_cap: 0
+                default_max_cap: #inf
+                max_annual: #inf
+    # Waste cement
+            - ec: #Csw
+                id: Csw
+                hourly_profiles:
+                default_co2: 0.33
+                default_price: 0.002
+                default_primary_energy_fraction: 1
+                default_min_cap: 0
+                default_max_cap: #inf
+                max_annual: #inf
+    # Biomass cement
+            - ec: #Sbf
+                id: Sbf
+                hourly_profiles:
+                default_co2: 0
+                default_price: 0.007
+                default_primary_energy_fraction: 1
+                default_min_cap: 0
+                default_max_cap: #inf
+                max_annual: #inf
+    # Coal
+            - ec: #Coal
+                id: Coal
+                hourly_profiles:
+                default_co2: 0.334
+                default_price: 0.034
+                default_primary_energy_fraction: 1
+                default_min_cap: 0
+                default_max_cap: #inf
+                max_annual: #inf
+    # Methane
+            - ec: #Ch4SynEu
+                id: Ch4SynEu
+                hourly_profiles:
+                default_co2: 0
+                default_price: 0.098
+                default_primary_energy_fraction: 1
+                default_min_cap: 0
+                default_max_cap: #inf
+                max_annual: #inf
+
+            - ec: #Ch4BioCh
+                id: Ch4BioCh
+                hourly_profiles:
+                default_co2: 0
+                default_price: 0.132
+                default_primary_energy_fraction: 1
+                default_min_cap: 0
+                default_max_cap: #inf
+                max_annual: #inf
+ ### H6 Tegra
+    - hub:
+        id: H6
+        import_ecs:
+    # Grid electricity (spot)
+            - ec: #El13
+                id: El13
+                hourly_profiles: import_profiles/I_Cross_Electricity_El13.csv
+    # # ThAmbWater15 - Schifflibach
+            # - ec: #ThAmbWater15
+                # id: ThAmbWater15
+                # hourly_profiles:
+                # default_co2: 0
+                # default_price: 0.00001
+                # default_primary_energy_fraction: 1
+                # default_min_cap: 0
+                # default_max_cap: #inf
+                # max_annual: #inf
+    # Wood
+            - ec: #Wood
+                id: Wood
+                hourly_profiles:
+                default_co2: 0
+                default_price: 0.047
+                default_primary_energy_fraction: 1
+                default_min_cap: 0
+                default_max_cap: #inf
+                max_annual: #inf
+    # Methane
+            - ec: #Ch4SynEu
+                id: Ch4SynEu
+                hourly_profiles:
+                default_co2: 0
+                default_price: 0.098
+                default_primary_energy_fraction: 0.9 #Adapt
+                default_min_cap: 0
+                default_max_cap: #inf
+                max_annual: #inf
+            - ec: #Ch4BioCh
+                id: Ch4BioCh
+                hourly_profiles:
+                default_co2: 0
+                default_price: 0.132
+                default_primary_energy_fraction: 1
+                default_min_cap: 0
+                default_max_cap: #inf
+                max_annual: #inf
+ ### H7 Ems
+    - hub:
+        id: H7
+        import_ecs:
+            - ec: #El13
+                id: El13
+                hourly_profiles: import_profiles/I_Cross_Electricity_El13.csv
+    # Methane
+            - ec: #Ch4SynEu
+                id: Ch4SynEu
+                hourly_profiles:
+                default_co2: 0
+                default_price: 0.098
+                default_primary_energy_fraction: 0.9 #Adapt
+                default_min_cap: 0
+                default_max_cap: #inf
+                max_annual: #inf
+            - ec: #Ch4BioCh
+                id: Ch4BioCh
+                hourly_profiles:
+                default_co2: 0
+                default_price: 0.132
+                default_primary_energy_fraction: 1
+                default_min_cap: 0
+                default_max_cap: #inf
+                max_annual: #inf
+ ### H8 Hydrogen hub
+    - hub:
+        id: H8
+        import_ecs:
+    # Grid electricity (spot)
+            - ec: #El13
+                id: El13
+                hourly_profiles: import_profiles/I_Cross_Electricity_El13.csv
+    # Hydrogen
+            - ec: #H2Imp
+                id: H2Imp
+                hourly_profiles:
+                default_co2: 0
+                default_price: 0.075
+                default_primary_energy_fraction: 1
+                default_min_cap: 0
+                default_max_cap: #inf
+                max_annual: #inf
+ ######### Exports #########
+ ### H1 Mitte / Chur
+    export_hubs:
+    - hub:
+        id: H1
+        export_ecs:
+    # El13
+        - ec: #El13
+            id: El13
+            hourly_profiles: #export_profiles/E_Cross_Electricity_El13.csv
+            default_co2: 0
+            default_price: 0
+            default_min_cap: 0
+            default_max_cap: 100000 #inf
+            max_annual: 100000 #inf
+ ### H2Imp West / Domat-Ems
+    - hub:
+        id: H2
+        export_ecs:
+    # El13
+        - ec: #El13
+            id: El13
+            hourly_profiles: #export_profiles/E_Cross_Electricity_El13.csv
+            default_co2: 0
+            default_price: 0
+            default_min_cap: 0
+            default_max_cap: 100000 #inf
+            max_annual: 100000 #inf
+ ### H3 Nord / Landquart
+    - hub:
+        id: H3
+        export_ecs:
+    # El13
+        - ec: #El13
+            id: El13
+            hourly_profiles: #export_profiles/E_Cross_Electricity_El13.csv
+            default_co2: 0
+            default_price: 0
+            default_min_cap: 0
+            default_max_cap: 100000 #inf
+            max_annual: 100000 #inf
+ ### H4 GEVAG
+    - hub:
+        id: H4
+        export_ecs:
+    # El13
+        - ec: #El13
+            id: El13
+            hourly_profiles: #export_profiles/E_Cross_Electricity_El13.csv
+            default_co2: 0
+            default_price: 0
+            default_min_cap: 0
+            default_max_cap: 100000 #inf
+            max_annual: 100000 #inf
+   # CO2Exp
+        - ec: #CO2Exp
+            id: CO2Exp
+            hourly_profiles:
+            default_co2: 1
+            default_price: -0.02 #20CHF/tCO2 transport and storage cost abroad
+            default_min_cap: 0
+            default_max_cap: #inf
+            max_annual: #inf
+ ### H5 Holcim
+    - hub:
+        id: H5
+        export_ecs:
+    # El13
+        - ec: #El13
+            id: El13
+            hourly_profiles: #export_profiles/E_Cross_Electricity_El13.csv
+            default_co2: 0
+            default_price: 0
+            default_min_cap: 0
+            default_max_cap: 100000 #inf
+            max_annual: 100000 #inf
+    # Clinker cement [kg]
+        - ec: #ClinkerExp
+            id: ClinkerExp
+            hourly_profiles:
+            default_co2: 0
+            default_price: 0.05
+            default_min_cap: 0
+            default_max_cap: #inf
+            max_annual: #inf
+   # CO2Exp
+        - ec: #CO2Exp
+            id: CO2Exp
+            hourly_profiles:
+            default_co2: 1
+            default_price: -0.02 #20CHF/tCO2 transport and storage cost abroad
+            default_min_cap: 0
+            default_max_cap: #inf
+            max_annual: #inf
+ ### H6 Tegra
+    - hub:
+        id: H6
+        export_ecs:
+    # El13
+        - ec: #El13
+            id: El13
+            hourly_profiles: #export_profiles/E_Cross_Electricity_El13.csv
+            default_co2: 0
+            default_price: 0
+            default_min_cap: 0
+            default_max_cap: 100000 #inf
+            max_annual: 100000 #inf
+    # CO2Exp
+        - ec: #CO2Exp
+            id: CO2Exp
+            hourly_profiles:
+            default_co2: 1
+            default_price: -0.02 #20CHF/tCO2 transport and storage cost abroad
+            default_min_cap: 0
+            default_max_cap: #inf
+            max_annual: #inf
+ ### H7 Ems
+    - hub:
+        id: H7
+        export_ecs:
+    # El13
+        - ec: #El13
+            id: El13
+            hourly_profiles: #export_profiles/E_Cross_Electricity_El13.csv
+            default_co2: 0
+            default_price: 0
+            default_min_cap: 0
+            default_max_cap: 100000 #inf
+            max_annual: 100000 #inf
+    # Ems products
+        - ec: #EmsProducts
+            id: EmsProducts
+            hourly_profiles:
+            default_co2: 0
+            default_price: 0
+            default_min_cap: #inf
+            default_max_cap: #inf
+            min_annual: #0
+            max_annual: #inf
+ ### H8 Hydrogen hub
+    - hub:
+        id: H8
+        export_ecs:
+    # El13
+        # - ec: #El13
+        #     id: El13
+        #     hourly_profiles: #export_profiles/E_Cross_Electricity_El13.csv
+        #     default_co2: 0
+        #     default_price: 0
+        #     default_min_cap: 0
+        #     default_max_cap: 100000000 #inf
+        #     max_annual: #inf
+    # # Hydrogen
+    #     - ec: #H2Exp
+    #         id: H2Exp
+    #         hourly_profiles:
+    #         default_co2: 0
+    #         default_price: 0.075
+    #         default_min_cap: 0
+    #         default_max_cap: #inf
+    #         max_annual: #inf
+    # SAF
+        - ec: #C12Saf
+            id: C12Saf
+            hourly_profiles:
+            default_co2: 0
+            default_price: 0.19 # chf/kWh
+            default_min_cap: 0
+            default_max_cap: #inf
+            min_annual: #GWh
+            max_annual: #inf

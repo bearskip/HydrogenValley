@@ -1,0 +1,247 @@
+solar_data:
+  irradiation_profiles: Solar_irradiation.csv
+  area_input_file: Solar_areas.csv
+
+ec_list:
+   #Thermal low temperature (Level I)
+    - ec:
+        id: ThBdg
+        imp_exp_type: internal
+        is_energy: True
+    - ec:
+        id: ThSh
+        imp_exp_type: internal
+        is_energy: True
+    - ec:
+        id: ThSc
+        imp_exp_type: internal
+        is_energy: True
+    - ec:
+        id: ThDhw
+        imp_exp_type: internal
+        is_energy: True
+    - ec:
+        id: ThLt
+        imp_exp_type: internal
+        is_energy: True
+    - ec:
+        id: ThLt55
+        imp_exp_type: internal
+        is_energy: True
+    - ec:
+        id: ThAmb
+        imp_exp_type: internal
+        is_energy: True
+    - ec: #ThAmbWater  #Ems waste heat 22C
+        id: ThAmbWater
+        imp_exp_type: internal
+        is_energy: True
+    # - ec: #ThAmbWater15
+        # id: ThAmbWater15
+        # imp_exp_type: internal
+        # is_energy: True
+   #Thermal medium temperature (Level I)
+    - ec:
+        id: ThHt #60-120 °C
+        imp_exp_type: internal
+        is_energy: True
+    - ec:
+        id: ThHt80Flue #80 °C from flue gas from Holcim exhaust
+        imp_exp_type: internal
+        is_energy: True
+    - ec:
+        id: ThHt80Mill #80 °C from Holcim mills
+        imp_exp_type: internal
+        is_energy: True
+    - ec:
+        id: ThHt70 #70 °C
+        imp_exp_type: internal
+        is_energy: True
+   #Thermal high temperature
+    - ec:
+        id: ThCem
+        imp_exp_type: internal
+        is_energy: True
+    - ec: #ThPhI
+        id: ThPhI
+        imp_exp_type: internal
+        is_energy: True
+    - ec: #ThSteam
+        id: ThSteam
+        imp_exp_type: internal
+        is_energy: True
+    - ec: #ThPhII
+        id: ThPhII
+        imp_exp_type: internal
+        is_energy: True
+    - ec:
+        id: ThGround
+        imp_exp_type: internal
+        is_energy: True
+    - ec:
+        id: Th400 #Specifically for Gevag and Tegra (480 °C)
+        imp_exp_type: internal
+        is_energy: True
+   #Electricity
+    - ec:
+        id: El13
+        imp_exp_type: cross
+        is_energy: True
+    - ec:
+        id: El47
+        imp_exp_type: internal
+        is_energy: True
+    - ec:
+        id: El47Net
+        imp_exp_type: internal
+        is_energy: True
+    - ec:
+        id: ElBdg
+        imp_exp_type: internal
+        is_energy: True
+   #Commodities
+    - ec: #Ch4
+        id: Ch4
+        imp_exp_type: cross
+        is_energy: True
+    - ec:
+        id: Ch4SynEu
+        imp_exp_type: cross
+        is_energy: True
+    - ec:
+        id: Ch4BioCh
+        category: primary
+        imp_exp_type: cross
+        is_energy: True
+    - ec:
+        id: Wood
+        imp_exp_type: cross
+        is_energy: True
+    - ec:
+        id: Msw
+        imp_exp_type: cross
+        is_energy: True
+    - ec:
+        id: Csw
+        imp_exp_type: cross
+        is_energy: True
+    - ec:
+        id: Sbf
+        imp_exp_type: cross
+        is_energy: True
+    - ec:
+        id: Coal
+        imp_exp_type: cross
+        is_energy: True
+    - ec:
+        id: H2
+        imp_exp_type: cross
+        is_energy: True
+    - ec:
+        id: H2Imp
+        imp_exp_type: cross
+        is_energy: True
+    - ec:
+        id: H2Exp
+        imp_exp_type: cross
+        is_energy: True
+    - ec:
+        id: PhFuel
+        imp_exp_type: internal
+        is_energy: True
+   #Materials
+    - ec:
+        id: CaCO3
+        imp_exp_type: cross
+        is_energy: False
+    - ec:
+        id: Clinker
+        imp_exp_type: cross
+        is_energy: False
+    - ec:
+        id: ClinkerSys
+        imp_exp_type: cross
+        is_energy: False
+    - ec:
+        id: ClinkerExp
+        imp_exp_type: cross
+        is_energy: False
+    - ec:
+        id: EmsProducts
+        imp_exp_type: cross
+        is_energy: False
+   #Solar
+    - ec:
+        id: SolFlat
+        imp_exp_type: internal
+        is_energy: True
+    - ec:
+        id: SolN
+        imp_exp_type: internal
+        is_energy: True
+    - ec:
+        id: SolNe
+        imp_exp_type: internal
+        is_energy: True
+    - ec:
+        id: SolE
+        imp_exp_type: internal
+        is_energy: True
+    - ec:
+        id: SolSe
+        imp_exp_type: internal
+        is_energy: True
+    - ec:
+        id: SolS
+        imp_exp_type: internal
+        is_energy: True
+    - ec:
+        id: SolSw
+        imp_exp_type: internal
+        is_energy: True
+    - ec:
+        id: SolW
+        imp_exp_type: internal
+        is_energy: True
+    - ec:
+        id: SolNw
+        imp_exp_type: internal
+        is_energy: True
+   #CO2
+    - ec:
+        id: CO2Waste
+        imp_exp_type: ignore
+        is_energy: False
+    - ec:
+        id: CO2Wood
+        imp_exp_type: ignore
+        is_energy: False
+    - ec:
+        id: CO2Cement
+        imp_exp_type: ignore
+        is_energy: False
+    - ec:
+        id: CO2Sys
+        imp_exp_type: internal
+        is_energy: False
+    - ec:
+        id: CO2Exp
+        imp_exp_type: cross
+        is_energy: False
+   #Hydrocarbons Liquid
+    - ec:
+        id: C8
+        category: primary
+        imp_exp_type: cross
+        is_energy: True
+    - ec:
+        id: C12
+        category: primary
+        imp_exp_type: cross
+        is_energy: True
+    - ec:
+        id: C12Saf
+        category: primary
+        imp_exp_type: cross
+        is_energy: True
+

@@ -1,0 +1,6 @@
+interest_rate_categories:
+  low: 0.05       # []
+  high: 0.05      # []
+TRL_threshold: 1 # [1-11]
+demand_profiles:
+  - demands.csv

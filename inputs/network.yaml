@@ -1,0 +1,680 @@
+network_techs:
+### Thermal Existing Networks
+- network_tech: # H4 GEVAG - H1 Mitte ThHt;     Net_H4_H1_ThHt
+    id: Net_H4_H1_ThHt
+    name: Net_H4_H1_ThHt
+    params:
+        ec: ThHt
+        loss: 0.000017143 # [0-1] Loss per meter. Total 12% for 7000m. 0.12/7000m = 0.000017143
+    constraints:
+        lifetime: 33
+        year_available: 2020
+        unit_cap_min: 18_000
+        unit_cap_max: 100_000
+    costs:
+        interest_rate_ref: low
+        inv_fix: 2500         # [CHF/m]
+        inv_per_cap: 0
+        om_fix: 0
+        om_per_cap: 0
+    emissions:
+        inv_CO2: 0
+        om_CO2: 0
+- network_tech: # H4 GEVAG - H3 Nord ThPhII;    Net_H4_H3_ThPhII
+    id: Net_H4_H3_ThPhII
+    name: Net_H4_H3_ThPhII
+    params:
+        ec: ThPhII
+        loss: 0.00003 # [0-1] Loss per meter. Total 15% for 5000m. 0.15/5000m = 0.00003
+    constraints:
+        lifetime: 33
+        year_available: 2020
+        unit_cap_min: 23_000
+        unit_cap_max: 100_000
+    costs:
+        interest_rate_ref: low
+        inv_fix: 2500         # [CHF/m]
+        inv_per_cap: 0
+        om_fix: 0
+        om_per_cap: 0
+    emissions:
+        inv_CO2: 0
+        om_CO2: 0
+- network_tech: # H6 Tegra - H7 Ems ThPhII;     Net_H6_H7_ThPhII
+    id: Net_H6_H7_ThPhII
+    name: Net_H6_H7_ThPhII
+    params:
+        ec: ThPhII
+        loss: 0.000133  # 0.04/300 (4% on 300m).
+    constraints:
+        lifetime: 33
+        year_available: 2020
+        unit_cap_min: 30_000
+        unit_cap_max: 30_000
+    costs:
+        interest_rate_ref: low
+        inv_fix: 2500         # [CHF/m]
+        inv_per_cap: 0
+        om_fix: 0
+        om_per_cap: 0
+    emissions:
+        inv_CO2: 0
+        om_CO2: 0
+- network_tech: # H7 Ems - H2 West ThAmbWater ;     Net_H7_H2_ThAmbWater  #Schlifflibach
+    id: Net_H7_H2_ThAmbWater
+    name: Net_H7_H2_ThAmbWater
+    params:
+        ec: ThAmbWater
+        loss: 0.000075  # 15% on 2000m. 0.15/200m = 0.000075
+    constraints:
+        lifetime: 33
+        year_available: 2020
+        unit_cap_min: 1_100
+        unit_cap_max: 3_000
+    costs:
+        interest_rate_ref: low
+        inv_fix: 2500
+        inv_per_cap: 0
+        om_fix: 0
+        om_per_cap: 0
+    emissions:
+        inv_CO2: 0
+        om_CO2: 0
+- network_tech: # H6 Tegra - H2 West/Tamins ThHt;      Net_H6_H2_ThHt  #New line from Peter @85C
+    id: Net_H6_H2_ThHt
+    name: Net_H6_H2_ThHt
+    params:
+        ec: ThHt
+        loss: 0.000075  # 15% on 2000m. 0.15/2000m = 0.000075
+    constraints:
+        lifetime: 33
+        year_available: 2020
+        unit_cap_min: 1_100 #Unknown
+        unit_cap_max: #1_100 #Unknown
+    costs:
+        interest_rate_ref: low
+        inv_fix: 2500
+        inv_per_cap: 0
+        om_fix: 0
+        om_per_cap: 0
+    emissions:
+        inv_CO2: 0
+        om_CO2: 0
+### Thermal New Networks
+- network_tech: # H6 Tegra - H1 Mitte ThHt70;   Net_H6_H1_ThHt70
+    id: Net_H6_H1_ThHt70
+    name: Net_H6_H1_ThHt70
+    params:
+        ec: ThHt70
+        loss: 0.00001875 #15% on 8000m
+    constraints:
+        lifetime: 33
+        year_available: 2020
+        unit_cap_min: 0
+        unit_cap_max: 1_000_000
+    costs:
+        interest_rate_ref: low
+        inv_fix: 2500
+        inv_per_cap: 0
+        om_fix: 0
+        om_per_cap: 0
+    emissions:
+        inv_CO2: 0
+        om_CO2: 0
+- network_tech: # H5 Holcim - H4 Gevag ThHt;    Net_H5_H4_ThHt
+    id: Net_H5_H4_ThHt
+    name: Net_H5_H4_ThHt
+    params:
+        ec: ThHt
+        loss: 0.000133  # 0.04/300 (4% on 300m)
+    constraints:
+        lifetime: 33
+        year_available: 2020
+        unit_cap_min: 0
+        unit_cap_max: 1_000_000
+    costs:
+        interest_rate_ref: low
+        inv_fix: 2500
+        inv_per_cap: 0
+        om_fix: 0
+        om_per_cap: 0
+    emissions:
+        inv_CO2: 0
+        om_CO2: 0
+- network_tech: # H5 Holcim - H4 Gevag ThPhII;  Net_H5_H4_ThPhII
+    id: Net_H5_H4_ThPhII
+    name: Net_H5_H4_ThPhII
+    params:
+        ec: ThPhII
+        loss: 0.000133  # 0.04/300 (4% on 300m)
+    constraints:
+        lifetime: 33
+        year_available: 2020
+        unit_cap_min: 0
+        unit_cap_max: 1_000_000
+    costs:
+        interest_rate_ref: low
+        inv_fix: 2500
+        inv_per_cap: 0
+        om_fix: 0
+        om_per_cap: 0
+    emissions:
+        inv_CO2: 0
+        om_CO2: 0
+- network_tech: # H5 Holcim - H1 Mitte ThPhII;  Net_H5_H1_ThPhII
+    id: Net_H5_H1_ThPhII
+    name: Net_H5_H1_ThPhII
+    params:
+        ec: ThPhII
+        loss: 0.00003 # [0-1] Loss per meter. Total 21% for 7000m. 0.21/7000m = 0.00003
+    constraints:
+        lifetime: 33
+        year_available: 2020
+        unit_cap_min: 0
+        unit_cap_max: 1_000_000
+    costs:
+        interest_rate_ref: low
+        inv_fix: 2500
+        inv_per_cap: 0
+        om_fix: 0
+        om_per_cap: 0
+    emissions:
+        inv_CO2: 0
+        om_CO2: 0
+- network_tech: # H5 Holcim - H3 Nord ThPhII;  Net_H5_H3_ThPhII
+    id: Net_H5_H3_ThPhII
+    name: Net_H5_H3_ThPhII
+    params:
+        ec: ThPhII
+        loss: 0.00003 # [0-1] Loss per meter. Total 15% for 5000m. 0.15/7000m = 0.00003
+    constraints:
+        lifetime: 33
+        year_available: 2020
+        unit_cap_min: 0
+        unit_cap_max: 1_000_000
+    costs:
+        interest_rate_ref: low
+        inv_fix: 2500
+        inv_per_cap: 0
+        om_fix: 0
+        om_per_cap: 0
+    emissions:
+        inv_CO2: 0
+        om_CO2: 0
+# - network_tech: # H7 Ems - H2 West ThLt55;      Net_H7_H2_ThLt55
+    # id: Net_H7_H2_ThLt55
+    # name: Net_H7_H2_ThLt55
+    # params:
+        # ec: ThLt55
+        # loss: 0.000075  # 15% on 2000m. 0.15/200m = 0.000075
+    # constraints:
+        # lifetime: 33
+        # year_available: 2020
+        # unit_cap_min: 0
+        # unit_cap_max: 100_000_000
+    # costs:
+        # interest_rate_ref: low
+        # inv_fix: 2500
+        # inv_per_cap: 0
+        # om_fix: 0
+        # om_per_cap: 0
+    # emissions:
+        # inv_CO2: 0
+        # om_CO2: 0
+- network_tech: # H7 Ems - H6 Tegra ThLt55;     Net_H7_H6_ThLt55
+    id: Net_H7_H6_ThLt55
+    name: Net_H7_H6_ThLt55
+    params:
+        ec: ThLt55
+        loss: 0.000133  # 0.04/300 (4% on 300m).
+    constraints:
+        lifetime: 33
+        year_available: 2020
+        unit_cap_min: 0
+        unit_cap_max: 1_000_000
+    costs:
+        interest_rate_ref: low
+        inv_fix: 2500
+        inv_per_cap: 0
+        om_fix: 0
+        om_per_cap: 0
+    emissions:
+        inv_CO2: 0
+        om_CO2: 0
+- network_tech: # H7 Ems - H1 Mitte ThAmbWater;      Net_H7_H1_ThAmbWater  #Probably for AnergieHP
+    id: Net_H7_H1_ThAmbWater
+    name: Net_H7_H1_ThAmbWater
+    params:
+        ec: ThAmbWater
+        loss: 0.0000125 #10% on 8000m #0.1/8000
+    constraints:
+        lifetime: 33
+        year_available: 2020
+        unit_cap_min: 0
+        unit_cap_max: 1_000_000
+    costs:
+        interest_rate_ref: low
+        inv_fix: 2500
+        inv_per_cap: 0
+        om_fix: 0
+        om_per_cap: 0
+    emissions:
+        inv_CO2: 0
+        om_CO2: 0
+# - network_tech: # H7 Ems - H2 West ThAmbWater;      Net_H7_H2_ThAmbWater
+    # id: Net_H7_H2_ThAmbWater
+    # name: Net_H7_H2_ThAmbWater
+    # params:
+        # ec: ThAmbWater
+        # loss: 0.000025 #10% on 2000m #0.05/8000
+    # constraints:
+        # lifetime: 33
+        # year_available: 2020
+        # unit_cap_min: 0
+        # unit_cap_max: 1_000_000
+    # costs:
+        # interest_rate_ref: low
+        # inv_fix: 2500
+        # inv_per_cap: 0
+        # om_fix: 0
+        # om_per_cap: 0
+    # emissions:
+        # inv_CO2: 0
+        # om_CO2: 0
+### Hydrogen Networks
+- network_tech:
+    id: Net_H2
+    name: Net_H2
+    params:
+        ec: H2
+        loss: 0
+    constraints:
+        lifetime: 30
+        year_available: 2020
+        unit_cap_min: 0
+        unit_cap_max: 100_000_000
+    costs:
+        interest_rate_ref: low
+        inv_fix: 1000         # [CHF/m]
+        inv_per_cap: 0        # [CHF/kW/m]
+        om_fix: 40            # [CHF/m]
+        om_per_cap: 0         # [CHF/kW/m]
+    emissions:
+        inv_CO2: 0
+        om_CO2: 0
+### CO2 Networks
+- network_tech:
+    id: Net_CO2
+    name: Net_CO2
+    params:
+        ec: CO2Sys
+        loss: 0
+    constraints:
+        lifetime: 40
+        year_available: 2020
+        unit_cap_min: 0
+        unit_cap_max: 100_000_000   # [kW] #TODO Link cap max
+    costs:
+        interest_rate_ref: low
+        inv_fix: 1200         # [CHF/m]
+        inv_per_cap: 0        # [CHF/kW/m]
+        om_fix: 48            # [CHF/m]
+        om_per_cap: 0         # [CHF/kW/m]
+    emissions:
+        inv_CO2: 0
+        om_CO2: 0
+network_links:
+### Thermal Existing Links
+- link: # Link_H4_H1_ThHt_7000m_Uni
+    id: Link_H4_H1_ThHt_7000m_Uni
+    name: Link_H4_H1_ThHt_7000m_Uni
+    params:
+      network_tech: Net_H4_H1_ThHt
+      length: 7000
+      hub_out: H4
+      hub_in: H1
+    constraints:
+      preinstalled:
+        capacity: 0
+        age: 0
+      unidirectional: True
+      cap_max: 100_000
+- link: # Link_H4_H3_ThPhII_5000m_Uni #extension allowed (Holcim -> Gevag -> Nord connection)
+    id: Link_H4_H3_ThPhII_5000m_Uni
+    name: Link_H4_H3_ThPhII_5000m_Uni
+    params:
+      network_tech: Net_H4_H3_ThPhII
+      length: 5000 # [m]
+      hub_out: H4
+      hub_in: H3
+    constraints:
+      preinstalled:
+        capacity: 0
+        age: 0
+      unidirectional: True
+      cap_max:
+- link: # Link_H6_H7_ThPhII_300m_Uni
+    id: Link_H6_H7_ThPhII_300m_Uni
+    name: Link_H6_H7_ThPhII_300m_Uni
+    params:
+      network_tech: Net_H6_H7_ThPhII
+      length: 300
+      hub_out: H6
+      hub_in: H7
+    constraints:
+      preinstalled:
+        capacity: 0
+        age: 0
+      unidirectional: True
+      cap_max: 30_000
+- link: # Link_H7_H2_ThAmbWater_2000m_Uni
+    id: Link_H7_H2_ThAmbWater_2000m_Uni
+    name: Link_H7_H2_ThAmbWater_2000m_Uni
+    params:
+      network_tech: Net_H7_H2_ThAmbWater
+      length: 2000
+      hub_out: H7
+      hub_in: H2
+    constraints:
+      preinstalled:
+        capacity: 0
+        age: 0
+      unidirectional: True
+      cap_max: 3_000
+- link: # Link_H6_H2_ThHt_2000m_Uni
+    id: Link_H6_H2_ThHt_2000m_Uni
+    name: Link_H6_H2_ThHt_2000m_Uni
+    params:
+      network_tech: Net_H6_H2_ThHt
+      length: 2000
+      hub_out: H6
+      hub_in: H2
+    constraints:
+      preinstalled:
+        capacity: 0
+        age: 0
+      unidirectional: True
+      cap_max:
+### Thermal New Links
+- link: # Link_H6_H1_ThHt70_8000m_Uni
+    id: Link_H6_H1_ThHt70_8000m_Uni
+    name: Link_H6_H1_ThHt70_8000m_Uni
+    params:
+      network_tech: Net_H6_H1_ThHt70
+      length: 8000
+      hub_out: H6
+      hub_in: H1
+    constraints:
+      preinstalled:
+        capacity: 0
+        age: 0
+      unidirectional: True
+      cap_max:
+- link: # Link_H5_H4_ThHt_300m_Bi
+    id: Link_H5_H4_ThHt_300m_Bi
+    name: Link_H5_H4_ThHt_300m_Bi
+    params:
+      network_tech: Net_H5_H4_ThHt
+      length: 300
+      hub_out: H5
+      hub_in: H4
+    constraints:
+      preinstalled:
+        capacity: 0
+        age: 0
+      unidirectional: False
+      cap_max:
+- link: # Link_H5_H4_ThPhII_300m_Bi
+    id: Link_H5_H4_ThPhII_300m_Bi
+    name: Link_H5_H4_ThPhII_300m_Bi
+    params:
+      network_tech: Net_H5_H4_ThPhII
+      length: 300
+      hub_out: H5
+      hub_in: H4
+    constraints:
+      preinstalled:
+        capacity: 0
+        age: 0
+      unidirectional: False
+      cap_max: 0 # Disabled, since exchange abuses Heat exchanger at Gevag
+- link: # Link_H5_H1_ThPhII_7000m_Uni
+    id: Link_H5_H1_ThPhII_7000m_Uni
+    name: Link_H5_H1_ThPhII_7000m_Uni
+    params:
+      network_tech: Net_H5_H1_ThPhII
+      length: 7000
+      hub_out: H5
+      hub_in: H1
+    constraints:
+      preinstalled:
+        capacity: 0
+        age: 0
+      unidirectional: True
+      cap_max:
+- link: # Link_H5_H3_ThPhII_7000m_Uni
+    id: Link_H5_H3_ThPhII_7000m_Uni
+    name: Link_H5_H3_ThPhII_7000m_Uni
+    params:
+      network_tech: Net_H5_H3_ThPhII
+      length: 5000
+      hub_out: H5
+      hub_in: H3
+    constraints:
+      preinstalled:
+        capacity: 0
+        age: 0
+      unidirectional: True
+      cap_max:
+- link: # Link_H7_H6_ThLt55_300m_Uni
+    id: Link_H7_H6_ThLt55_300m_Uni
+    name: Link_H7_H6_ThLt55_300m_Uni
+    params:
+      network_tech: Net_H7_H6_ThLt55
+      length: 300
+      hub_out: H7
+      hub_in: H6
+    constraints:
+      preinstalled:
+        capacity: 0
+        age: 0
+      unidirectional: True
+      cap_max:
+# - link: # Link_H7_H2_ThLt55_2000m_Uni
+    # id: Link_H7_H2_ThLt55_2000m_Uni
+    # name: Link_H7_H2_ThLt55_2000m_Uni
+    # params:
+      # network_tech: Net_H7_H2_ThLt55
+      # length: 2000
+      # hub_out: H7
+      # hub_in: H2
+    # constraints:
+      # preinstalled:
+        # capacity: 0
+        # age: 0
+      # unidirectional: True
+      # cap_max:
+- link: # Link_H7_H1_ThAmbWater_8000m_Uni
+    id: Link_H7_H1_ThAmbWater_8000m_Uni
+    name: Link_H7_H1_ThAmbWater_8000m_Uni
+    params:
+      network_tech: Net_H7_H1_ThAmbWater
+      length: 8000
+      hub_out: H7
+      hub_in: H1
+    constraints:
+      preinstalled:
+        capacity: 0
+        age: 0
+      unidirectional: True
+      cap_max:
+# - link: # Link_H7_H2_ThAmbWater_2000m_Uni
+    # id: Link_H7_H2_ThAmbWater_2000m_Uni
+    # name: Link_H7_H2_ThAmbWater_2000m_Uni
+    # params:
+      # network_tech: Net_H7_H2_ThAmbWater
+      # length: 2000
+      # hub_out: H7
+      # hub_in: H2
+    # constraints:
+      # preinstalled:
+        # capacity: 0
+        # age: 0
+      # unidirectional: True
+      # cap_max:
+
+### CO2 Links HX->H8
+- link: # Link_H4_H8_CO2
+    id: Link_H4_H8_CO2
+    name: Link_H4_H8_CO2
+    params:
+      network_tech: Net_CO2
+      length: 650
+      hub_out: H4
+      hub_in: H8
+    constraints:
+      preinstalled:
+        capacity: 0
+        age: 0
+      unidirectional: True
+      cap_max:
+- link: # Link_H5_H8_CO2
+    id: Link_H5_H8_CO2
+    name: Link_H5_H8_CO2
+    params:
+      network_tech: Net_CO2
+      length: 500
+      hub_out: H5
+      hub_in: H8
+    constraints:
+      preinstalled:
+        capacity: 0
+        age: 0
+      unidirectional: True
+      cap_max:
+- link: # Link_H6_H8_CO2
+    id: Link_H6_H8_CO2
+    name: Link_H6_H8_CO2
+    params:
+      network_tech: Net_CO2
+      length: 16150        # 8700 + 6800 + 650 [m]
+      hub_out: H6
+      hub_in: H8
+    constraints:
+      preinstalled:
+        capacity: 0
+        age: 0
+      unidirectional: True
+      cap_max:
+### Hydrogen Links
+### H2 Links H1->HX
+- link: # Link_H1_H4
+    id: Link_H1_H4
+    name: Link_H1_H4
+    params:
+      network_tech: Net_H2
+      length: 6800
+      hub_out: H1
+      hub_in: H4
+    constraints:
+      preinstalled:
+        capacity: 0
+        age: 0
+      unidirectional: False
+      cap_max:
+- link: # Link_H1_H6
+    id: Link_H1_H6
+    name: Link_H1_H6
+    params:
+      network_tech: Net_H2
+      length: 8700
+      hub_out: H1
+      hub_in: H6
+    constraints:
+      preinstalled:
+        capacity: 0
+        age: 0
+      unidirectional: False
+      cap_max:
+### H2 Links H2->HX
+- link: # Link_H2_H6
+    id: Link_H2_H6
+    name: Link_H2_H6
+    params:
+      network_tech: Net_H2
+      length: 5400
+      hub_out: H2
+      hub_in: H6
+    constraints:
+      preinstalled:
+        capacity: 0
+        age: 0
+      unidirectional: False
+## H2 Links H4->HX
+- link: # Link_H4_H5
+    id: Link_H4_H5
+    name: Link_H4_H5
+    params:
+      network_tech: Net_H2
+      length: 500
+      hub_out: H4
+      hub_in: H5
+    constraints:
+      preinstalled:
+        capacity: 0
+        age: 0
+      unidirectional: False
+## H2 Links H6->HX
+- link: # Link_H6_H7
+    id: Link_H6_H7
+    name: Link_H6_H7
+    params:
+      network_tech: Net_H2
+      length: 530
+      hub_out: H6
+      hub_in: H7
+    constraints:
+      preinstalled:
+        capacity: 0
+        age: 0
+      unidirectional: False
+# ### H2 Links H8->HX
+- link: # Link_H8_H3
+    id: Link_H8_H3
+    name: Link_H8_H3
+    params:
+      network_tech: Net_H2
+      length: 10000
+      hub_out: H3
+      hub_in: H8
+    constraints:
+      preinstalled:
+        capacity: 0
+        age: 0
+      unidirectional: False
+- link: # Link_H8_H4
+    id: Link_H8_H4
+    name: Link_H8_H4
+    params:
+      network_tech: Net_H2
+      length: 650
+      hub_out: H4
+      hub_in: H8
+    constraints:
+      preinstalled:
+        capacity: 0
+        age: 0
+      unidirectional: False
+# - link: # Link_H8_H5
+#     id: Link_H8_H5
+#     name: Link_H8_H5
+#     params:
+#       network_tech: Net_H2
+#       length: 500
+#       hub_out: H5
+#       hub_in: H8
+#     constraints:
+#       preinstalled:
+#         capacity: 0
+#         age: 0
+#       unidirectional: False

@@ -1,0 +1,858 @@
+######### Tech Lists #########
+tech_lists:
+  - tech_list: # Building techs
+      id: building_techs
+      techs:
+       ### Dummy techs
+        - T_C_Dummy_Thermal_ThBdg_ThSh
+        - T_C_Dummy_Thermal_ThBdg_ThDhw
+        - T_C_Dummy_Thermal_ThHt70_ThBdg
+        - T_C_Dummy_Ch4_Ch4SynEu_Ch4
+        - T_C_Dummy_Ch4_Ch4BioCh_Ch4
+       ### Electricity network
+        - T_C_Net_Elec_El13_El47
+        - T_C_NetCoupled_Elec_El47_El13
+        - T_C_Net_Elec_El47_ElBdg
+        - T_C_NetCoupled_Elec_ElBdg_El47
+        - T_C_Net_Elec_El47Net_El47
+       ### Electricity district
+        - T_S_Stor_Elec_Battery_El47
+       ### Electricity building
+        - T_S_Stor_Elec_Battery_ElBdg_2050
+       ### Thermal Building
+        - T_C_Conv_Thermal_ThBdg_Hp
+        - T_C_Coupled_Thermal_ThBdg_HpSc
+        - T_C_Conv_Thermal_ThBdg_AnHp
+        - T_C_Coupled_Thermal_ThBdg_AnHpSc
+        - T_C_Conv_Thermal_ThBdg_GsHp
+        - T_C_Coupled_Thermal_ThBdg_GsHpSc
+        - T_C_Conv_Thermal_ThBdg_El
+        - T_C_Conv_Thermal_ThBdg_Wood
+        - T_C_Conv_Thermal_ThBdg_Ch4
+        - T_C_Conv_Thermal_ThBdg_C12
+        - T_C_Conv_Thermal_ThAmb_ThSc
+        - T_S_Stor_Thermal_ThBdg
+       ### Thermal District
+        - T_C_Net_Thermal_ThHt_ThBdg
+        - T_C_Net_Thermal_ThPhII_ThSteam
+        - T_C_Conv_Thermal_El47_ThAmbWater_ThBdg  #Schifflibach HP, only allowed in Hub2
+        - T_C_Net_Thermal_Wood_ThBdg
+        - T_C_Conv_Thermal_Hp_ThLt55_ThBdg
+       ### High temperature & process heat
+        - T_C_Conv_Thermal_H2_ThPhI
+        - T_C_Conv_Thermal_Ch4_ThPhI
+        - T_C_Conv_Thermal_Wood_ThPhI
+        - T_C_Conv_Thermal_El47_ThAmb_ThPhI
+        - T_C_Conv_Thermal_H2_ThPhII
+        - T_C_Conv_Thermal_Ch4_ThPhII
+        - T_C_Conv_Thermal_Wood_ThPhII
+        - T_C_Conv_Thermal_El47_ThPhII
+       ### Thermal vents
+        - T_C_Conv_Thermal_ThLt_Vent
+        - T_C_Conv_Thermal_ThHt_Vent
+        - T_C_Conv_Thermal_ThPhI_Vent
+       ### Solar Pv
+        - T_C_Sol_Solar_Pv_Roof_2050_SolFlat
+        - T_C_Sol_Solar_Pv_Roof_2050_SolN
+        - T_C_Sol_Solar_Pv_Roof_2050_SolNe
+        - T_C_Sol_Solar_Pv_Roof_2050_SolE
+        - T_C_Sol_Solar_Pv_Roof_2050_SolSe
+        - T_C_Sol_Solar_Pv_Roof_2050_SolS
+        - T_C_Sol_Solar_Pv_Roof_2050_SolSw
+        - T_C_Sol_Solar_Pv_Roof_2050_SolW
+        - T_C_Sol_Solar_Pv_Roof_2050_SolNw
+       ### Solar Thermal
+        - T_C_Sol_Solar_Thermal_Roof_2050_SolFlat
+        - T_C_Sol_Solar_Thermal_Roof_2050_SolN
+        - T_C_Sol_Solar_Thermal_Roof_2050_SolNe
+        - T_C_Sol_Solar_Thermal_Roof_2050_SolE
+        - T_C_Sol_Solar_Thermal_Roof_2050_SolSe
+        - T_C_Sol_Solar_Thermal_Roof_2050_SolS
+        - T_C_Sol_Solar_Thermal_Roof_2050_SolSw
+        - T_C_Sol_Solar_Thermal_Roof_2050_SolW
+        - T_C_Sol_Solar_Thermal_Roof_2050_SolNw
+       ### Powerplants
+        - T_C_Conv_Elec_Wood_El47_Chp
+        - T_C_Conv_Elec_Ch4_El47_Chp
+        - T_C_Conv_Elec_ThGround_El47_Geothermal
+       ### Hydrogen techs
+        - T_S_Stor_Hydrogen_Compressed
+        - T_C_Conv_Hydrogen_El47_H2
+        - T_C_Conv_Elec_H2_El47_ThHt
+        - T_C_Conv_Elec_H2_El47_ThBdg
+       ### Hydrogen network
+        - T_C_Net_H2Imp_H2
+        - T_C_Net_H2_H2Exp
+  - tech_list: # Gevag techs
+      id: gevag_techs
+      techs:
+       ### Dummy techs
+        - T_C_Dummy_Ch4_Ch4SynEu_Ch4
+        - T_C_Dummy_Ch4_Ch4BioCh_Ch4
+       ### Electricity network
+        - T_C_Net_Elec_El13_El47
+        - T_C_NetCoupled_Elec_El47_El13
+        - T_C_Net_Elec_El47_ElBdg
+        - T_C_NetCoupled_Elec_ElBdg_El47
+        - T_C_Net_Elec_El47Net_El47
+       ### Electricity district
+        - T_S_Stor_Elec_Battery_El47
+       ### Gevag core techs
+        - T_C_Conv_Thermal_Msw_Th400
+        # - T_C_Conv_Thermal_Th400_ThPhII #Removing Abspritzung to utilize Turbines 1 and 2
+        - T_C_Conv_Thermal_C12_ThHt
+        - T_S_Stor_Waste_Msw
+       ### Heat exchanger
+        - T_C_Conv_Thermal_ThPhII_ThHt_Gevag
+       ### Steam turbines
+        - T_C_Conv_Elec_Th400_El13_ThHt_Bp
+        - T_C_Conv_Elec_Th400_El13_ThPhII_Cond1
+        - T_C_Conv_Elec_Th400_El13_ThLt_Cond2
+       ### Heat pump
+        - T_C_Conv_Thermal_El47_ThLt_ThHt
+       ### CO2 capture
+        # - T_C_Conv_CarbonCapture_Waste_Amine_2030
+        - T_C_Conv_CarbonCapture_Waste_Hpc_2030
+       ### CO2 vent or transport
+        - T_C_Conv_CarbonCapture_CO2Waste_Vent
+        - T_C_Net_CarbonDioxide_CO2Sys_CO2Exp
+       ### High temperature & process heat
+        - T_C_Conv_Thermal_H2_ThHt
+        - T_C_Conv_Thermal_Ch4_ThHt
+        - T_C_Conv_Thermal_El47_ThAmb_ThHt
+        - T_C_Conv_Thermal_H2_ThPhII
+        - T_C_Conv_Thermal_Ch4_ThPhII
+        - T_C_Conv_Thermal_Wood_ThPhII
+        - T_C_Conv_Thermal_El47_ThPhII
+       ### Thermal vents
+        - T_C_Conv_Thermal_ThLt_Vent
+        - T_C_Conv_Thermal_ThHt_Vent
+        - T_C_Conv_Thermal_ThPhII_Vent
+       ### Thermal storage
+        - T_S_Stor_Thermal_ThHt
+        - T_S_Stor_Thermal_ThPhII
+       ### Hydrogen techs
+        - T_S_Stor_Hydrogen_Compressed
+        - T_C_Conv_Hydrogen_El47_H2
+        - T_C_Conv_Elec_H2_El47_ThHt
+        - T_C_Conv_Elec_H2_El47_ThBdg
+       ### Hydrogen network
+        - T_C_Net_H2Imp_H2
+        - T_C_Net_H2_H2Exp
+  - tech_list: # Holcim techs
+      id: holcim_techs
+      techs:
+       ### Dummy techs Ch4
+        - T_C_Dummy_Ch4_Ch4SynEu_Ch4
+        - T_C_Dummy_Ch4_Ch4BioCh_Ch4
+       ### Dummy techs ThCem
+        - T_C_Dummy_Thermal_Coal_ThCem
+        - T_C_Dummy_Thermal_H2_ThCem
+        - T_C_Dummy_Thermal_Ch4_ThCem
+        - T_C_Dummy_Thermal_Csw_ThCem
+        - T_C_Dummy_Thermal_Sbf_ThCem
+       ### Dummy techs Clinker
+        - T_C_Dummy_ClinkerSys_Clinker
+        - T_C_Dummy_Clinker_ClinkerExp
+       ### Electricity network
+        - T_C_Net_Elec_El13_El47
+        - T_C_NetCoupled_Elec_El47_El13
+        - T_C_Net_Elec_El47_ElBdg
+        - T_C_NetCoupled_Elec_ElBdg_El47
+        - T_C_Net_Elec_El47Net_El47
+       ### Electricity district
+        - T_S_Stor_Elec_Battery_El47
+       ### Holcim main techs
+        - T_C_Conv_Holcim_CaCO3_Clinker
+        - T_C_Conv_Elec_ThPhII_El47_Isobutane
+        - T_C_Conv_Thermal_Clinker_ThHt
+        - T_C_Conv_Thermal_ClinkerSys_ThPhII
+        - T_C_Conv_Thermal_Fluegas_ThHt
+       ### Heat exchanger techs
+        - T_C_Conv_Thermal_ThPhII_ThHt
+       ### Holcim CO2 capture
+        # - T_C_Conv_CarbonCapture_Cement_MeaAmine_2030
+        # - T_C_Conv_CarbonCapture_Cement_Amine_2030
+        - T_C_Conv_CarbonCapture_Cement_Hpc_2030
+        - T_C_Conv_CarbonCapture_CO2Cement_Vent
+        - T_C_Net_CarbonDioxide_CO2Sys_CO2Exp
+       ### High temperature and process heat
+        - T_C_Conv_Thermal_H2_ThHt
+        - T_C_Conv_Thermal_Ch4_ThHt
+        - T_C_Conv_Thermal_H2_ThPhII
+        - T_C_Conv_Thermal_Ch4_ThPhII
+        - T_C_Conv_Thermal_El47_ThPhII
+       ### High temperature heat pumps
+        - T_C_Conv_Thermal_El47_ThHt80Mill_ThHt
+        - T_C_Conv_Thermal_El47_ThAmb_ThHt
+        - T_C_Conv_Thermal_El47_ThLt_ThHt
+       ### Thermal storage
+        - T_S_Stor_Thermal_ThHt
+        - T_S_Stor_Thermal_ThPhII
+       ### Thermal vents
+        - T_C_Conv_Thermal_ThLt_Vent
+        - T_C_Conv_Thermal_ThHt_Vent
+        - T_C_Conv_Thermal_ThHt80Flue_Vent
+        - T_C_Conv_Thermal_ThPhII_Vent
+       ### Hydrogen techs
+        - T_S_Stor_Hydrogen_Compressed
+        - T_C_Conv_Hydrogen_El47_H2
+        - T_C_Conv_Elec_H2_El47_ThHt
+        - T_C_Conv_Elec_H2_El47_ThBdg
+       ### Hydrogen network
+        - T_C_Net_H2Imp_H2
+        - T_C_Net_H2_H2Exp
+  - tech_list: # Tegra techs
+      id: tegra_techs
+      techs:
+       ### Dummy techs
+        - T_C_Dummy_Ch4_Ch4SynEu_Ch4
+        - T_C_Dummy_Ch4_Ch4BioCh_Ch4
+       ### Electricity network
+        - T_C_Net_Elec_El13_El47
+        - T_C_NetCoupled_Elec_El47_El13
+        - T_C_Net_Elec_El47_ElBdg
+        - T_C_NetCoupled_Elec_ElBdg_El47
+        - T_C_Net_Elec_El47Net_El47
+       ### Electricity district
+        - T_S_Stor_Elec_Battery_El47
+       ### Tegra core techs
+        - T_C_Conv_Elec_Wood_Th400
+        - T_C_Conv_Thermal_Th400_ThPhII
+       ### Heat exchanger
+        - T_C_Conv_Thermal_ThPhII_ThHt
+       ### Steam turbines
+        - T_C_Conv_Elec_Th400_El13_ThHt_Bp
+        - T_C_Conv_Elec_Th400_El13_ThPhII_Cond1
+        - T_C_Conv_Elec_Th400_El13_ThLt_Cond2
+        - T_C_Conv_Elec_Th400_El13_ThHt70_Cond2Tegra
+       ### High temperature heat pumps
+        - T_C_Conv_Thermal_El47_ThLt_ThHt
+        - T_C_Conv_Thermal_El47_ThLt_ThHt70
+        - T_C_Conv_Thermal_El47_ThHt70_ThHt
+        - T_C_Conv_Thermal_El47_ThLt55_ThHt70
+       ### Ambient heat conversion Tegra -> West
+        - T_C_Conv_Thermal_ThLt_ThAmbWater
+       ### High temperature and process heat
+        - T_C_Conv_Thermal_H2_ThHt
+        - T_C_Conv_Thermal_Ch4_ThHt
+        - T_C_Conv_Thermal_El47_ThAmb_ThHt
+        - T_C_Conv_Thermal_H2_ThPhII
+        - T_C_Conv_Thermal_Ch4_ThPhII
+        - T_C_Conv_Thermal_Wood_ThPhII
+        - T_C_Conv_Thermal_El47_ThPhII
+       ### Thermal vents
+        - T_C_Conv_Thermal_ThLt_Vent
+        - T_C_Conv_Thermal_ThHt70_Vent
+        - T_C_Conv_Thermal_ThHt_Vent
+        - T_C_Conv_Thermal_ThPhII_Vent
+       ### CO2 capture
+        # - T_C_Conv_CarbonCapture_Wood_Amine_2030
+        - T_C_Conv_CarbonCapture_Wood_Hpc_2030
+       ### CO2 vent or transport
+        - T_C_Conv_CarbonCapture_CO2Wood_Vent
+        - T_C_Net_CarbonDioxide_CO2Sys_CO2Exp
+       ### Thermal storage
+        - T_S_Stor_Thermal_ThHt
+        - T_S_Stor_Thermal_ThHt70
+        - T_S_Stor_Thermal_ThPhII
+       ### Hydrogen techs
+        - T_S_Stor_Hydrogen_Compressed
+        - T_C_Conv_Hydrogen_El47_H2
+        - T_C_Conv_Elec_H2_El47_ThHt
+        - T_C_Conv_Elec_H2_El47_ThBdg
+       ### Hydrogen network
+        - T_C_Net_H2Imp_H2
+        - T_C_Net_H2_H2Exp
+  - tech_list: # Ems techs
+      id: ems_techs
+      techs:
+       ### Dummy techs
+        - T_C_Dummy_Ch4_Ch4SynEu_Ch4
+        - T_C_Dummy_Ch4_Ch4BioCh_Ch4
+        - T_C_Dummy_Ch4_PhFuel
+        - T_C_Dummy_H2_PhFuel
+       ### Electricity network
+        - T_C_Net_Elec_El13_El47
+        - T_C_NetCoupled_Elec_El47_El13
+        - T_C_Net_Elec_El47_ElBdg
+        - T_C_NetCoupled_Elec_ElBdg_El47
+        - T_C_Net_Elec_El47Net_El47
+       ### Electricity district
+        - T_S_Stor_Elec_Battery_El47
+       ### Ems techs
+        - T_C_Conv_Ems
+       ### Heat pump
+        - T_C_Conv_Thermal_El47_ThAmbWater_ThLt55
+       ### Thermal vent
+        - T_C_Conv_Thermal_ThAmbWater_Vent
+        - T_C_Conv_Thermal_ThLt_Vent
+        - T_C_Conv_Thermal_ThHt_Vent
+       ### Process heat
+        - T_C_Conv_Thermal_H2_ThHt
+        - T_C_Conv_Thermal_Ch4_ThHt
+        - T_C_Conv_Thermal_El47_ThAmb_ThHt
+        - T_C_Conv_Thermal_H2_ThPhII
+        - T_C_Conv_Thermal_Ch4_ThPhII
+        - T_C_Conv_Thermal_Wood_ThPhII
+        - T_C_Conv_Thermal_El47_ThPhII
+       ### Hydrogen techs
+        - T_S_Stor_Hydrogen_Compressed
+        - T_C_Conv_Hydrogen_El47_H2
+        - T_C_Conv_Elec_H2_El47_ThHt
+        - T_C_Conv_Elec_H2_El47_ThBdg
+       ### Hydrogen network
+        - T_C_Net_H2Imp_H2
+        - T_C_Net_H2_H2Exp
+  - tech_list: # H2 and SAF Hub 8
+      id: saf_techs
+      techs:
+       ### Fischer-Tropsch
+        - T_C_Conv_Saf_FischerTropsch_H2_C12Saf
+       ### Hydrogen techs
+        - T_S_Stor_Hydrogen_Compressed
+        - T_C_Conv_Hydrogen_El47_H2
+       ### Hydrogen network
+        - T_C_Net_H2Imp_H2
+        - T_C_Net_H2_H2Exp
+       ### Electricity network
+        - T_C_Net_Elec_El13_El47
+        - T_C_NetCoupled_Elec_El47_El13
+        - T_C_Net_Elec_El47_ElBdg
+        - T_C_NetCoupled_Elec_ElBdg_El47
+        - T_C_Net_Elec_El47Net_El47
+       ### Electricity district
+        - T_S_Stor_Elec_Battery_El47
+
+######### Hub implementation #########
+hubs:
+  - hub: # H1 Mitte / Chur
+      id: H1
+      techs_ref: building_techs
+      tech_constraints:
+        - tech: #T_C_Conv_Thermal_ThAmb_ThSc
+            id: T_C_Conv_Thermal_ThAmb_ThSc
+            last_inst_allowed: 2059
+            init_capacity: 0
+            init_age: 0
+            stage_constraints:
+              - stage:
+                  id: S1
+                  availability: availability_profiles/availability_ThSc.csv
+        - tech: #T_C_Conv_Thermal_ThBdg_Hp
+            id: T_C_Conv_Thermal_ThBdg_Hp
+            last_inst_allowed: 2059
+            init_capacity: 0
+            init_age: 0
+            stage_constraints:
+              - stage:
+                  id: S1
+                  availability: availability_profiles/availability_ThBdg_H1.csv
+        - tech: #T_C_Conv_Thermal_ThBdg_AnHp
+            id: T_C_Conv_Thermal_ThBdg_AnHp
+            last_inst_allowed: 2059
+            init_capacity: 0
+            init_age: 0
+            stage_constraints:
+              - stage:
+                  id: S1
+                  availability: availability_profiles/availability_ThBdg_H1.csv
+        - tech: #T_C_Conv_Thermal_ThBdg_GsHp
+            id: T_C_Conv_Thermal_ThBdg_GsHp
+            last_inst_allowed: 2059
+            init_capacity: 0
+            init_age: 0
+            stage_constraints:
+              - stage:
+                  id: S1
+                  availability: availability_profiles/availability_ThBdg_H1.csv
+                  max_out_ts_horizon: 292_000_000 #79 GWh Konzession Chur zur Grundwassernutzung. COP 3.7. 79 GWh * 3.7 = 292 GWh.
+        - tech: #T_C_Conv_Thermal_ThBdg_Wood
+            id: T_C_Conv_Thermal_ThBdg_Wood
+            last_inst_allowed: 2059
+            init_capacity: 0
+            init_age: 0
+            stage_constraints:
+              - stage:
+                  id: S1
+                  availability: availability_profiles/availability_ThBdg_H1.csv
+        - tech: #T_C_Conv_Thermal_ThBdg_Ch4
+            id: T_C_Conv_Thermal_ThBdg_Ch4
+            last_inst_allowed: 2059
+            init_capacity: 0
+            init_age: 0
+            stage_constraints:
+              - stage:
+                  id: S1
+                  availability: availability_profiles/availability_ThBdg_H1.csv
+        - tech: #T_C_Conv_Thermal_ThBdg_C12
+            id: T_C_Conv_Thermal_ThBdg_C12
+            last_inst_allowed: 2059
+            init_capacity: 0
+            init_age: 0
+            stage_constraints:
+              - stage:
+                  id: S1
+                  availability: availability_profiles/availability_ThBdg_H1.csv
+        - tech: #T_C_Net_Thermal_Wood_ThBdg
+            id: T_C_Net_Thermal_Wood_ThBdg
+            last_inst_allowed: 2059
+            init_capacity: 0
+            init_age: 0
+            stage_constraints:
+              - stage:
+                  id: S1
+                  max_cap_hub: 0 # Only usable in hub Nord
+        - tech: #T_C_Conv_Elec_Wood_El47_Chp
+            id: T_C_Conv_Elec_Wood_El47_Chp
+            last_inst_allowed: 2059
+            init_capacity: 0
+            init_age: 0
+            stage_constraints:
+              - stage:
+                  id: S1
+                  max_out_ts_horizon: 55_000_000 #Enable wood and gas Chp. Capacity limit is for either or installation.
+        - tech: #T_C_Conv_Elec_Ch4_El47_Chp
+            id: T_C_Conv_Elec_Ch4_El47_Chp
+            last_inst_allowed: 2059
+            init_capacity: 0
+            init_age: 0
+            stage_constraints:
+              - stage:
+                  id: S1
+                  max_out_ts_horizon: 55_000_000 #Enable wood and gas Chp. Capacity limit is for either or installation.
+        - tech: #T_C_Conv_Elec_ThGround_El47_Geothermal
+            id: T_C_Conv_Elec_ThGround_El47_Geothermal
+            last_inst_allowed: 2059
+            init_capacity: 0
+            init_age: 0
+            stage_constraints:
+              - stage:
+                  id: S1
+                  max_out_ts_horizon: 0
+        - tech: #T_C_Conv_Thermal_El47_ThAmbWater_ThBdg
+            id: T_C_Conv_Thermal_El47_ThAmbWater_ThBdg
+            last_inst_allowed: 2059
+            init_capacity: 0
+            init_age: 0
+            stage_constraints:
+              - stage:
+                  id: S1
+                  max_out_ts_horizon: 0 #Schifflibach HP --> Only allowed for Hub 2
+  - hub: # H2 West / Domat-Ems
+      id: H2
+      techs_ref: building_techs
+      tech_constraints:
+        - tech: #T_C_Net_Thermal_ThHt_ThBdg
+            id: T_C_Net_Thermal_ThHt_ThBdg #Tegra-Tamins ThHt network
+            last_inst_allowed: 2059
+            init_capacity: 0
+            init_age: 0
+            stage_constraints:
+              - stage:
+                  id: S1
+                  # No capacity contraints: Given by output of Tegra and Network
+                  min_out_ts_horizon: 3_000_000
+                  max_out_ts_horizon: 6_000_000
+        - tech: #T_C_Conv_Thermal_ThAmb_ThSc
+            id: T_C_Conv_Thermal_ThAmb_ThSc
+            last_inst_allowed: 2059
+            init_capacity: 0
+            init_age: 0
+            stage_constraints:
+              - stage:
+                  id: S1
+                  availability: availability_profiles/availability_ThSc.csv
+        - tech: #T_C_Conv_Thermal_ThBdg_Hp
+            id: T_C_Conv_Thermal_ThBdg_Hp
+            last_inst_allowed: 2059
+            init_capacity: 0
+            init_age: 0
+            stage_constraints:
+              - stage:
+                  id: S1
+                  availability: availability_profiles/availability_ThBdg_H2.csv
+        - tech: #T_C_Conv_Thermal_ThBdg_AnHp
+            id: T_C_Conv_Thermal_ThBdg_AnHp
+            last_inst_allowed: 2059
+            init_capacity: 0
+            init_age: 0
+            stage_constraints:
+              - stage:
+                  id: S1
+                  min_cap_hub: 4_900 #1_100 ThAmbWater Network* COP 4.5
+                  availability: availability_profiles/availability_ThBdg_H2.csv
+        - tech: #T_C_Conv_Thermal_ThBdg_GsHp
+            id: T_C_Conv_Thermal_ThBdg_GsHp
+            last_inst_allowed: 2059
+            init_capacity: 0
+            init_age: 0
+            stage_constraints:
+              - stage:
+                  id: S1
+                  availability: availability_profiles/availability_ThBdg_H2.csv
+        - tech: #T_C_Conv_Thermal_ThBdg_Wood
+            id: T_C_Conv_Thermal_ThBdg_Wood
+            last_inst_allowed: 2059
+            init_capacity: 0
+            init_age: 0
+            stage_constraints:
+              - stage:
+                  id: S1
+                  availability: availability_profiles/availability_ThBdg_H2.csv
+        - tech: #T_C_Conv_Thermal_ThBdg_Ch4
+            id: T_C_Conv_Thermal_ThBdg_Ch4
+            last_inst_allowed: 2059
+            init_capacity: 0
+            init_age: 0
+            stage_constraints:
+              - stage:
+                  id: S1
+                  availability: availability_profiles/availability_ThBdg_H2.csv
+        - tech: #T_C_Conv_Thermal_ThBdg_C12
+            id: T_C_Conv_Thermal_ThBdg_C12
+            last_inst_allowed: 2059
+            init_capacity: 0
+            init_age: 0
+            stage_constraints:
+              - stage:
+                  id: S1
+                  availability: availability_profiles/availability_ThBdg_H2.csv
+        - tech: #T_C_Conv_Thermal_El47_ThAmbWater_ThBdg  #Schifflibach from Ems @22C
+            id: T_C_Conv_Thermal_El47_ThAmbWater_ThBdg
+            last_inst_allowed: 2059
+            init_capacity: 0
+            init_age: 0
+            stage_constraints:
+              - stage:
+                  id: S1
+                  min_cap_hub: 3_000
+                  min_out_ts_horizon: 2_700_000 # 2_100_000 kWh/a ThLt. Output: 2.1 GWh * El47/ThLt (0.23/0.77) * COP(4.3) = 2.7 GWh/a
+                  max_out_ts_horizon: 7_300_000 # 5_700_000 kWh/a ThLt. Output: 5.7 GWh * El47/ThLt (0.23/0.77) * COP(4.3) = 7.3 GWh/a
+        - tech: #T_C_Net_Thermal_Wood_ThBdg
+            id: T_C_Net_Thermal_Wood_ThBdg
+            last_inst_allowed: 2059
+            init_capacity: 0
+            init_age: 0
+            stage_constraints:
+              - stage:
+                  id: S1
+                  max_cap_hub: 0 # Only usable in hub Nord
+        - tech: #T_C_Conv_Elec_Wood_El47_Chp
+            id: T_C_Conv_Elec_Wood_El47_Chp
+            last_inst_allowed: 2059
+            init_capacity: 0
+            init_age: 0
+            stage_constraints:
+              - stage:
+                  id: S1
+                  max_out_ts_horizon: 0 #Only in Mitte hub
+        - tech: #T_C_Conv_Elec_Ch4_El47_Chp
+            id: T_C_Conv_Elec_Ch4_El47_Chp
+            last_inst_allowed: 2059
+            init_capacity: 0
+            init_age: 0
+            stage_constraints:
+              - stage:
+                  id: S1
+                  max_out_ts_horizon: 0 #Only in Mitte hub
+        - tech: #T_C_Conv_Elec_ThGround_El47_Geothermal
+            id: T_C_Conv_Elec_ThGround_El47_Geothermal
+            last_inst_allowed: 2059
+            init_capacity: 0
+            init_age: 0
+            stage_constraints:
+              - stage:
+                  id: S1
+                  max_out_ts_horizon: 0
+  - hub: # H3 Nord / Landquart
+      id: H3
+      techs_ref: building_techs
+      tech_constraints:
+        - tech: #T_C_Conv_Thermal_ThAmb_ThSc
+            id: T_C_Conv_Thermal_ThAmb_ThSc
+            last_inst_allowed: 2059
+            init_capacity: 0
+            init_age: 0
+            stage_constraints:
+              - stage:
+                  id: S1
+                  availability: availability_profiles/availability_ThSc.csv
+        - tech: #T_C_Conv_Thermal_ThBdg_Hp
+            id: T_C_Conv_Thermal_ThBdg_Hp
+            last_inst_allowed: 2059
+            init_capacity: 0
+            init_age: 0
+            stage_constraints:
+              - stage:
+                  id: S1
+                  availability: availability_profiles/availability_ThBdg_H3.csv
+        - tech: #T_C_Conv_Thermal_ThBdg_AnHp
+            id: T_C_Conv_Thermal_ThBdg_AnHp
+            last_inst_allowed: 2059
+            init_capacity: 0
+            init_age: 0
+            stage_constraints:
+              - stage:
+                  id: S1
+                  availability: availability_profiles/availability_ThBdg_H3.csv
+        - tech: #T_C_Conv_Thermal_ThBdg_GsHp
+            id: T_C_Conv_Thermal_ThBdg_GsHp
+            last_inst_allowed: 2059
+            init_capacity: 0
+            init_age: 0
+            stage_constraints:
+              - stage:
+                  id: S1
+                  availability: availability_profiles/availability_ThBdg_H3.csv
+        - tech: #T_C_Conv_Thermal_ThBdg_Wood
+            id: T_C_Conv_Thermal_ThBdg_Wood
+            last_inst_allowed: 2059
+            init_capacity: 0
+            init_age: 0
+            stage_constraints:
+              - stage:
+                  id: S1
+                  availability: availability_profiles/availability_ThBdg_H3.csv
+        - tech: #T_C_Conv_Thermal_ThBdg_Ch4
+            id: T_C_Conv_Thermal_ThBdg_Ch4
+            last_inst_allowed: 2059
+            init_capacity: 0
+            init_age: 0
+            stage_constraints:
+              - stage:
+                  id: S1
+                  availability: availability_profiles/availability_ThBdg_H3.csv
+        - tech: #T_C_Conv_Thermal_ThBdg_C12
+            id: T_C_Conv_Thermal_ThBdg_C12
+            last_inst_allowed: 2059
+            init_capacity: 0
+            init_age: 0
+            stage_constraints:
+              - stage:
+                  id: S1
+                  availability: availability_profiles/availability_ThBdg_H3.csv
+        - tech: #T_C_Net_Thermal_Wood_ThBdg
+            id: T_C_Net_Thermal_Wood_ThBdg
+            last_inst_allowed: 2059
+            init_capacity: 0
+            init_age: 0
+            stage_constraints:
+              - stage:
+                  id: S1
+                  min_cap_hub: 2_500 #Updated value from IBC
+                  max_cap_hub: 2_500 #Updated value from IBC
+                  min_out_ts_horizon: 5_000_000 #Updated value from IBC
+        - tech: #T_C_Conv_Elec_Wood_El47_Chp
+            id: T_C_Conv_Elec_Wood_El47_Chp
+            last_inst_allowed: 2059
+            init_capacity: 0
+            init_age: 0
+            stage_constraints:
+              - stage:
+                  id: S1
+                  max_out_ts_horizon: 0 #Only in Mitte hub
+        - tech: #T_C_Conv_Elec_Ch4_El47_Chp
+            id: T_C_Conv_Elec_Ch4_El47_Chp
+            last_inst_allowed: 2059
+            init_capacity: 0
+            init_age: 0
+            stage_constraints:
+              - stage:
+                  id: S1
+                  max_out_ts_horizon: 0 #Only in Mitte hub
+        - tech: #T_C_Conv_Elec_ThGround_El47_Geothermal
+            id: T_C_Conv_Elec_ThGround_El47_Geothermal
+            last_inst_allowed: 2059
+            init_capacity: 0
+            init_age: 0
+            stage_constraints:
+              - stage:
+                  id: S1
+                  max_out_ts_horizon: 18_000_000
+        - tech: #T_C_Conv_Thermal_El47_ThAmbWater_ThBdg
+            id: T_C_Conv_Thermal_El47_ThAmbWater_ThBdg
+            last_inst_allowed: 2059
+            init_capacity: 0
+            init_age: 0
+            stage_constraints:
+              - stage:
+                  id: S1
+                  max_out_ts_horizon: 0 #Schifflibach HP --> Only allowed for Hub 2
+  - hub: # H4 Gevag
+      id: H4
+      techs_ref: gevag_techs
+      tech_constraints:
+        - tech: #T_C_Conv_Thermal_Msw_Th400
+            id: T_C_Conv_Thermal_Msw_Th400
+            last_inst_allowed: 2059
+            init_capacity: 0
+            init_age: 0
+            stage_constraints:
+              - stage:
+                  id: S1
+                  min_cap_hub: 0
+        - tech: #T_C_Conv_Elec_Th400_El13_ThPhII_Cond1
+            id: T_C_Conv_Elec_Th400_El13_ThPhII_Cond1
+            last_inst_allowed: 2059
+            init_capacity: 0
+            init_age: 0
+            stage_constraints:
+              - stage:
+                  id: S1
+                  min_cap_hub: 7_000
+                  # max_cap_hub: 7_000
+                  min_out_ts_horizon: 18_850_000 #Min El13 output fixed so that it produces min 194 GWh of ThPhII for cond turbine 2
+        - tech: #T_C_Conv_Elec_Th400_El13_ThLt_Cond2
+            id: T_C_Conv_Elec_Th400_El13_ThLt_Cond2
+            last_inst_allowed: 2059
+            init_capacity: 0
+            init_age: 0
+            stage_constraints:
+              - stage:
+                  id: S1
+                  min_cap_hub: 5_000
+                  # max_cap_hub: 5_000
+                  min_out_ts_horizon: 36_000_000 #Min El13 output fixed so that it produces min 120 GWh of ThLt out of 213 GWh ThLt at GEVAG. Rest ThLt is from main tech.
+  - hub: # H5 Holcim
+      id: H5
+      techs_ref: holcim_techs
+      tech_constraints:
+       ### Holcim
+        - tech: #T_C_Conv_Holcim_CaCO3_Clinker
+            id: T_C_Conv_Holcim_CaCO3_Clinker
+            last_inst_allowed: 2059
+            init_capacity: 0
+            init_age: 0
+            stage_constraints:
+              - stage:
+                  id: S1
+                  availability: availability_profiles/availability_Holcim.csv
+                  min_cap_hub: 80_000
+                  max_cap_hub: 80_000
+                  min_out_ts_horizon: 450_000_000
+                  max_out_ts_horizon: 450_000_000
+        - tech: #T_C_Net_Elec_El13_El47
+            id: T_C_Net_Elec_El13_El47
+            last_inst_allowed: 2059
+            init_capacity: 0
+            init_age: 0
+            stage_constraints:
+              - stage:
+                  id: S1
+                  max_out_ts_horizon: 61_000_000 #Limit electricity import to max. required
+        - tech: #T_C_Dummy_Thermal_Csw_ThCem
+            id: T_C_Dummy_Thermal_Csw_ThCem
+            last_inst_allowed: 2059
+            init_capacity: 0
+            init_age: 0
+            stage_constraints:
+              - stage:
+                  id: S1
+                  min_out_ts_horizon: 140_000_000
+        - tech: #T_C_Dummy_Thermal_Sbf_ThCem
+            id: T_C_Dummy_Thermal_Sbf_ThCem
+            last_inst_allowed: 2059
+            init_capacity: 0
+            init_age: 0
+            stage_constraints:
+              - stage:
+                  id: S1
+                  min_out_ts_horizon: 37_000_000
+        - tech: #T_C_Dummy_Thermal_Coal_ThCem
+            id: T_C_Dummy_Thermal_Coal_ThCem
+            last_inst_allowed: 2059
+            init_capacity: 0
+            init_age: 0
+            stage_constraints:
+              - stage:
+                  id: S1
+                  max_out_ts_horizon: 41_000_000
+        - tech: #T_C_Conv_Thermal_Clinker_ThHt #Lump sum heat exchanger for exhaust and clinker cooler
+            id: T_C_Conv_Thermal_Clinker_ThHt
+            last_inst_allowed: 2059
+            init_capacity: 0
+            init_age: 0
+            stage_constraints:
+              - stage:
+                  id: S1
+                  max_out_ts_horizon: 13_000_000
+        - tech: #T_C_Conv_Thermal_ClinkerSys_ThPhII
+            id: T_C_Conv_Thermal_ClinkerSys_ThPhII
+            last_inst_allowed: 2059
+            init_capacity: 0
+            init_age: 0
+            stage_constraints:
+              - stage:
+                  id: S1
+                  max_out_ts_horizon: 35_000_000
+  - hub: # H6 Tegra
+      id: H6
+      techs_ref: tegra_techs
+      tech_constraints:
+        - tech: #T_C_Conv_Elec_Wood_Th400
+            id: T_C_Conv_Elec_Wood_Th400
+            last_inst_allowed: 2059
+            init_capacity: 0
+            init_age: 0
+            stage_constraints:
+              - stage:
+                  id: S1
+                  min_cap_hub: 54_000
+                  max_cap_hub: 80_000
+                  min_out_ts_horizon:  310_000_000 #Th400 output. 87% efficiency wood -> Th400. 440 GWh * 0.87 * 0.8
+                  max_out_ts_horizon:  460_000_000 #Th400 output. 87% efficiency wood -> Th400. 440 GWh * 0.87 * 1.2
+  - hub: # H7 Ems
+      id: H7
+      techs_ref: ems_techs
+      tech_constraints:
+       ### Ems
+        - tech: #T_C_Conv_Ems
+            id: T_C_Conv_Ems
+            last_inst_allowed: 2059
+            init_capacity: 0
+            init_age: 0
+            stage_constraints:
+              - stage:
+                  id: S1
+                  min_out_ts_horizon: 214_000_000
+        - tech: #T_C_Conv_Thermal_El47_ThAmbWater_ThLt55
+            id: T_C_Conv_Thermal_El47_ThAmbWater_ThLt55
+            last_inst_allowed: 2059
+            init_capacity: 0
+            init_age: 0
+            stage_constraints:
+              - stage:
+                  id: S1
+                  max_out_ts_horizon: 8_000_000
+  - hub: # H8 Hydrogen Hub
+      id: H8
+      techs_ref: saf_techs
+      tech_constraints:
+        - tech: #T_C_Conv_Hydrogen_El47_H2
+            id: T_C_Conv_Hydrogen_El47_H2
+            last_inst_allowed: 2059
+            init_capacity: 0
+            init_age: 0
+            stage_constraints:
+              - stage:
+                  id: S1
+                  max_cap_hub:  # 0 if No H2 production in hub 8
+        - tech: #T_C_Conv_Elec_H2_El47_ThHt
+            id: T_C_Conv_Elec_H2_El47_ThHt
+            last_inst_allowed: 2059
+            init_capacity: 0
+            init_age: 0
+            stage_constraints:
+              - stage:
+                  id: S1
+                  max_cap_hub: # 0 if No H2 production in hub 8
+        - tech: #T_C_Conv_Elec_H2_El47_ThBdg
+            id: T_C_Conv_Elec_H2_El47_ThBdg
+            last_inst_allowed: 2059
+            init_capacity: 0
+            init_age: 0
+            stage_constraints:
+              - stage:
+                  id: S1
+                  max_cap_hub: # 0 if No H2 production in hub 8

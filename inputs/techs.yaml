@@ -1,0 +1,2589 @@
+######### Solar and Wind groups #########
+in_ec_groups:
+  ### Solar grouping
+   - ec_group:
+       id: SolGroup
+       ecs:
+         - SolFlat
+         - SolN
+         - SolNe
+         - SolE
+         - SolSe
+         - SolS
+         - SolSw
+         - SolW
+         - SolNw
+
+technology_definitions: #Collapse techs with Alt+3. Collapse categories Alt+2. Defold with Alt + Shift + 1/2
+  ### Dummy techs
+   - tech: #T_C_Dummy_Thermal_ThBdg_ThSh
+       type: conversion
+       id: T_C_Dummy_Thermal_ThBdg_ThSh
+       params:
+         in_ec:
+           - [ThBdg, 1]
+         efficiency:
+           - [ThSh, 1]
+         main_out_ec: ThSh
+       constraints_general:
+         lifetime_years: 100
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 0.0001
+         om_fix: 0
+         om_per_cap: 0
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Dummy_Thermal_ThBdg_ThDhw
+       type: conversion
+       id: T_C_Dummy_Thermal_ThBdg_ThDhw
+       params:
+         in_ec:
+           - [ThBdg, 1]
+         efficiency:
+           - [ThDhw, 1]
+         main_out_ec: ThDhw
+       constraints_general:
+         lifetime_years: 100
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 0.0001
+         om_fix: 0
+         om_per_cap: 0
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Dummy_Thermal_ThHt70_ThBdg
+       type: conversion
+       id: T_C_Dummy_Thermal_ThHt70_ThBdg
+       params:
+         in_ec:
+           - [ThHt70, 1]
+         efficiency:
+           - [ThBdg, 1]
+         main_out_ec: ThBdg
+       constraints_general:
+         lifetime_years: 100
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 0.0001
+         om_fix: 0
+         om_per_cap: 0
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Dummy_Ch4_Ch4SynEu_Ch4
+       type: conversion
+       id: T_C_Dummy_Ch4_Ch4SynEu_Ch4
+       params:
+         in_ec:
+           - [Ch4SynEu, 1]
+         efficiency:
+           - [Ch4, 1]
+         main_out_ec: Ch4
+       constraints_general:
+         lifetime_years: 100
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 0.0001
+         om_fix: 0
+         om_per_cap: 0
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Dummy_Ch4_Ch4BioCh_Ch4
+       type: conversion
+       id: T_C_Dummy_Ch4_Ch4BioCh_Ch4
+       params:
+         in_ec:
+           - [Ch4BioCh, 1]
+         efficiency:
+           - [Ch4, 1]
+         main_out_ec: Ch4
+       constraints_general:
+         lifetime_years: 100
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 0.0001
+         om_fix: 0
+         om_per_cap: 0
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Dummy_Ch4_PhFuel
+       type: conversion
+       id: T_C_Dummy_Ch4_PhFuel
+       params:
+         in_ec:
+           - [Ch4, 1]
+         efficiency:
+           - [PhFuel, 1]
+         main_out_ec: PhFuel
+       constraints_general:
+         lifetime_years: 100
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 0.0001
+         om_fix: 0
+         om_per_cap: 0
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Dummy_H2_PhFuel
+       type: conversion
+       id: T_C_Dummy_H2_PhFuel
+       params:
+         in_ec:
+           - [H2, 1]
+         efficiency:
+           - [PhFuel, 1]
+         main_out_ec: PhFuel
+       constraints_general:
+         lifetime_years: 100
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 0.0001
+         om_fix: 0
+         om_per_cap: 0
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+  ### Electricity network
+   - tech: #T_C_Net_Elec_El13_El47
+       type: conversion
+       id: T_C_Net_Elec_El13_El47
+       params:
+         in_ec:
+           - [El13, 1]
+         efficiency:
+           - [El47, 0.99]
+         main_out_ec: El47
+       constraints_general:
+         lifetime_years: 100
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 0
+         om_fix: 0
+         om_per_cap: 0
+         costs_om_per_energy: 0.04
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_NetCoupled_Elec_El47_El13
+       type: conversion
+       subtype: coupled
+       id: T_C_NetCoupled_Net_Elec_El47_El13
+       params:
+         in_ec:
+           - [El47, 1]
+         efficiency:
+           - [El13, 0.99]
+         main_out_ec: El13
+       constraints_coupling:
+         master_tech: T_C_Net_Elec_El13_El47
+         cap_fraction: 1
+   - tech: #T_C_Net_Elec_El47_ElBdg
+       type: conversion
+       id: T_C_Net_Elec_El47_ElBdg
+       params:
+         in_ec:
+           - [El47, 1]
+         efficiency:
+           - [ElBdg, 0.96]
+         main_out_ec: ElBdg
+       constraints_general:
+         lifetime_years: 100
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 0
+         om_fix: 0
+         om_per_cap: 0
+         costs_om_per_energy: 0.08
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_NetCoupled_Elec_ElBdg_El47
+       type: conversion
+       subtype: coupled
+       id: T_C_NetCoupled_Elec_ElBdg_El47
+       params:
+         in_ec:
+           - [ElBdg, 1]
+         efficiency:
+           - [El47, 0.96]
+         main_out_ec: El47
+       constraints_coupling:
+         master_tech: T_C_Net_Elec_El47_ElBdg
+         cap_fraction: 1
+   - tech: #T_C_Net_Elec_El47Net_El47
+       type: conversion
+       id: T_C_Net_Elec_El47Net_El47
+       params:
+         in_ec:
+           - [El47Net, 1]
+         efficiency:
+           - [El47, 0.96]
+         main_out_ec: El47
+       constraints_general:
+         lifetime_years: 100
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 0
+         om_fix: 0
+         om_per_cap: 0
+         costs_om_per_energy: 0.08
+       emissions:
+         inv_per_cap_CO2: 0
+  ### Hydrogen network
+   - tech: #T_C_Net_H2Imp_H2
+       type: conversion
+       id: T_C_Net_H2Imp_H2
+       params:
+         in_ec:
+           - [H2Imp, 1]
+         efficiency:
+           - [H2, 1]
+         main_out_ec: H2
+       constraints_general:
+         lifetime_years: 30
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 0
+         om_fix: 0
+         om_per_cap: 0
+         costs_om_per_energy: 0.000001 #To avoid arbitrage
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Net_H2_H2Exp
+       type: conversion
+       id: T_C_Net_H2_H2Exp
+       params:
+         in_ec:
+           - [H2, 1]
+         efficiency:
+           - [H2Exp, 1]
+         main_out_ec: H2Exp
+       constraints_general:
+         lifetime_years: 30
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 0
+         om_fix: 0
+         om_per_cap: 0
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+  ### Electricity district
+   - tech: #T_S_Stor_Elec_Battery_El47
+       type: storage
+       id: T_S_Stor_Elec_Battery_El47
+       params:
+         ec: El47
+         efficiency_in: 0.949
+         efficiency_out: 0.949
+       constraints_general:
+         lifetime_years: 30
+         unit_cap_min: 0
+         TRL:
+           - [2050, 11]
+       constraints_storage:
+         min_charging_rate: 0
+         max_charging_rate: 1
+         min_discharging_rate: 0
+         max_discharging_rate: 1
+         min_SoC: 0
+         max_SoC: 1
+         standby_loss: 0
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 200 # https://www.nrel.gov/docs/fy20osti/75385.pdf
+         om_fix: 0
+         om_per_cap: 1
+       emissions:
+         inv_per_cap_CO2: 0
+  ### Electricity building
+   - tech: #T_S_Stor_Elec_Battery_ElBdg_2050
+       type: storage
+       id: T_S_Stor_Elec_Battery_ElBdg_2050
+       params:
+         ec: ElBdg
+         efficiency_in: 0.949
+         efficiency_out: 0.949
+       constraints_general:
+         lifetime_years: 30
+         unit_cap_min: 0
+         TRL:
+           - [2050, 11]
+       constraints_storage:
+         min_charging_rate: 0
+         max_charging_rate: 1
+         min_discharging_rate: 0
+         max_discharging_rate: 1
+         min_SoC: 0
+         max_SoC: 1
+         standby_loss: 0
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 300 # https://www.nrel.gov/docs/fy20osti/75385.pdf
+         om_fix: 0
+         om_per_cap: 1
+       emissions:
+         inv_per_cap_CO2: 0
+  ### Thermal Building
+   - tech: #T_C_Conv_Thermal_ThBdg_Hp
+       type: conversion
+       id: T_C_Conv_Thermal_ThBdg_Hp
+       params:
+         in_ec:
+           - [ElBdg, 1]
+         efficiency: efficiency_profiles/COP_T_C_Conv_Thermal_ThBdg_Hp.csv
+           #- [ThBdg, 2.9] #annual average: 3.4. In winter likely lower. Estimation at around 2.9 for heating period
+         main_out_ec: ThBdg
+       constraints_general:
+         lifetime_years: 20
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 2700
+         om_fix: 0
+         om_per_cap: 81
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Coupled_Thermal_ThBdg_HpSc
+       type: conversion
+       subtype: coupled
+       id: T_C_Coupled_Thermal_ThBdg_HpSc
+       params:
+         in_ec:
+           - [ElBdg, 1]
+         efficiency:
+           - [ThSc, 3.5] #For simplicity, a constant COP of 3.5 for cooling is assumed
+         main_out_ec: ThSc
+       constraints_coupling:
+         master_tech: T_C_Conv_Thermal_ThBdg_Hp
+         cap_fraction: 1
+   - tech: #T_C_Conv_Thermal_ThBdg_GsHp
+       type: conversion
+       id: T_C_Conv_Thermal_ThBdg_GsHp
+       params:
+         in_ec:
+           - [ElBdg, 1]
+         efficiency:
+           - [ThBdg, 3.7]   # Calculated with a RF of 0.6 10°C -> 65°C
+         main_out_ec: ThBdg
+       constraints_general:
+         lifetime_years: 20
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 2900
+         om_fix: 0
+         om_per_cap: 21
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Coupled_Thermal_ThBdg_GsHpSc
+       type: conversion
+       subtype: coupled
+       id: T_C_Coupled_Thermal_ThBdg_GsHpSc
+       params:
+         in_ec:
+           - [ThAmb, 0.9]
+           - [ThBdg, 0.1] # Assumption for pumping
+         main_in_ec: ThAmb
+         efficiency:
+           - [ThSc, 1]   # Free cooling
+         main_out_ec: ThSc
+       constraints_coupling:
+         master_tech: T_C_Conv_Thermal_ThBdg_GsHp
+         cap_fraction: 1
+   - tech: #T_C_Conv_Thermal_ThBdg_AnHp
+       type: conversion
+       id: T_C_Conv_Thermal_ThBdg_AnHp
+       params:
+         in_ec:
+           - [ElBdg, 0.22]
+           - [ThAmbWater, 0.78]
+         main_in_ec: ElBdg
+         efficiency:
+           - [ThBdg, 4.5]
+         main_out_ec: ThBdg
+       constraints_general:
+         lifetime_years: 20
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 2700
+         om_fix: 0
+         om_per_cap: 21
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Coupled_Thermal_ThBdg_AnHpSc
+       type: conversion
+       subtype: coupled
+       id: T_C_Coupled_Thermal_ThBdg_AnHpSc
+       params:
+         in_ec:
+           - [ThAmbWater, 0.9]
+           - [ThBdg, 0.1] # Assumption for pumping
+         main_in_ec: ThAmbWater
+         efficiency:
+           - [ThSc, 1] # Free cooling
+         main_out_ec: ThSc
+       constraints_coupling:
+         master_tech: T_C_Conv_Thermal_ThBdg_AnHp
+         cap_fraction: 1
+   - tech: #T_C_Conv_Thermal_ThBdg_El
+       type: conversion
+       id: T_C_Conv_Thermal_ThBdg_El
+       params:
+         in_ec:
+           - [ElBdg, 1]
+         efficiency:
+           - [ThBdg, 1]
+         main_out_ec: ThBdg
+       constraints_general:
+         lifetime_years: 25
+         unit_cap_min: 5
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 65
+         om_fix: 0
+         om_per_cap: 1
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Conv_Thermal_ThBdg_Wood
+       type: conversion
+       id: T_C_Conv_Thermal_ThBdg_Wood
+       params:
+         in_ec:
+           - [Wood, 1]
+         efficiency:
+           - [ThBdg, 0.8]
+         main_out_ec: ThBdg
+       constraints_general:
+         lifetime_years: 25
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 2600
+         om_fix: 0
+         om_per_cap: 156
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Conv_Thermal_ThBdg_Ch4
+       type: conversion
+       id: T_C_Conv_Thermal_ThBdg_Ch4
+       params:
+         in_ec:
+           - [Ch4, 1]
+         efficiency:
+           - [ThBdg, 0.96]
+         main_out_ec: ThBdg
+       constraints_general:
+         lifetime_years: 20
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 1900
+         om_fix: 0
+         om_per_cap: 114
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Conv_Thermal_ThBdg_C12
+       type: conversion
+       id: T_C_Conv_Thermal_ThBdg_C12
+       params:
+         in_ec:
+           - [C12, 1]
+         efficiency:
+           - [ThBdg, 0.9]
+         main_out_ec: ThBdg
+       constraints_general:
+         lifetime_years: 20
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 2500
+         om_fix: 0
+         om_per_cap: 150
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Conv_Thermal_ThAmb_ThSc
+       type: conversion
+       id: T_C_Conv_Thermal_ThAmb_ThSc
+       params:
+         in_ec:
+           - [ThAmb, 1]
+         efficiency:
+           - [ThSc, 1]
+         main_out_ec: ThSc
+       constraints_general:
+         lifetime_years: 20
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 0.0001
+         om_fix: 0
+         om_per_cap: 0
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_S_Stor_Thermal_ThBdg
+       type: storage
+       id: T_S_Stor_Thermal_ThBdg
+       params:
+         ec: ThBdg
+         efficiency_in: 0.99
+         efficiency_out: 0.99
+       constraints_general:
+         lifetime_years: 40
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       constraints_storage:
+         min_charging_rate: 0
+         max_charging_rate: 1
+         min_discharging_rate: 0
+         max_discharging_rate: 1
+         min_SoC: 0
+         max_SoC: 1
+         standby_loss: 0.00971305
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 60
+         om_fix: 0
+         om_per_cap: 0.6
+       emissions:
+         inv_per_cap_CO2: 0
+  ### Thermal District
+   - tech: #T_C_Net_Thermal_ThHt_ThBdg
+       type: conversion
+       id: T_C_Net_Thermal_ThHt_ThBdg
+       params:
+         in_ec:
+           - [ThHt, 1]
+         efficiency:
+           - [ThBdg, 1]
+         main_out_ec: ThBdg
+       constraints_general:
+         lifetime_years: 100
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 0
+         om_fix: 0
+         om_per_cap: 0
+         costs_om_per_energy: 0.01 #District heating network utilization 0.01CHF/kWhTh
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Net_Thermal_ThPhII_ThSteam
+       type: conversion
+       id: T_C_Net_Thermal_ThPhII_ThSteam
+       params:
+         in_ec:
+           - [ThPhII, 1]
+         efficiency:
+           - [ThSteam, 1]
+         main_out_ec: ThSteam
+       constraints_general:
+         lifetime_years: 100
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 0
+         om_fix: 0
+         om_per_cap: 0
+         costs_om_per_energy: 0.01 #District heating network utilization 0.01CHF/kWhTh
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Conv_Thermal_El47_ThAmbWater_ThBdg  #Schlifflibach
+       type: conversion
+       id: T_C_Conv_Thermal_El47_ThAmbWater_ThBdg
+       params:
+         in_ec:
+           - [ThAmbWater, 0.77]
+           - [El47, 0.23]
+         main_in_ec: El47
+         efficiency:
+           - [ThBdg, 4.3]
+         main_out_ec: ThBdg
+       constraints_general:
+         lifetime_years: 20
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 529
+         om_fix: 0
+         om_per_cap: 16
+         costs_om_per_energy: 0.01 #District heating network utilization 0.01CHF/kWhTh
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Conv_Thermal_Hp_ThLt55_ThBdg
+       type: conversion
+       id: T_C_Conv_Thermal_Hp_ThLt55_ThBdg
+       params:
+         in_ec:
+           - [ThLt55, 0.92]
+           - [El47, 0.08]
+         main_in_ec: El47
+         efficiency:
+           - [ThBdg, 12.4] #Estimated temperature loss Tegra -> West: 55°C -> 50°C.
+         main_out_ec: ThBdg
+       constraints_general:
+         lifetime_years: 25
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 350
+         om_fix: 0
+         om_per_cap: 11
+         costs_om_per_energy: 0.01 #District heating network utilization 0.01CHF/kWhTh
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Net_Thermal_Wood_ThBdg
+       type: conversion
+       id: T_C_Net_Thermal_Wood_ThBdg
+       params:
+         in_ec:
+           - [Wood, 1]
+         efficiency:
+           - [ThBdg, 0.85]
+         main_out_ec: ThBdg
+       constraints_general:
+         lifetime_years: 25
+         unit_cap_min: 0
+         TRL:
+           - [2018, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 500
+         om_fix: 0
+         om_per_cap: 15
+         costs_om_per_energy: 0.01 #District heating network utilization 0.01CHF/kWhTh
+       emissions:
+         inv_per_cap_CO2: 0
+  ### Geothermal
+   - tech: #T_C_Conv_Elec_ThGround_El47_Geothermal
+       type: conversion
+       id: T_C_Conv_Elec_ThGround_El47_Geothermal
+       params:
+         in_ec:
+           - [ThGround, 1]
+         efficiency:
+           - [El47, 0.2]
+           - [ThHt, 0.7]
+         main_out_ec: El47
+       constraints_general:
+         lifetime_years: 30
+         unit_cap_min: 0
+         TRL:
+           - [2040, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 8000 #Steam is approx. 1/3 of cost: https://www.geothermal-energy.org/pdf/IGAstandard/WGC/2000/R0097.PDF
+         om_fix: 0
+         om_per_cap: 222
+         costs_om_per_energy: 0.01 #1Rp per kWh steam #Steam is approx. 1/3 of cost: https://www.geothermal-energy.org/pdf/IGAstandard/WGC/2000/R0097.PDF
+       emissions:
+         inv_per_cap_CO2: 0
+  ### Chp Chur
+   - tech: #T_C_Conv_Elec_Wood_El47_Chp
+       type: conversion
+       id: T_C_Conv_Elec_Wood_El47_Chp
+       params:
+         in_ec:
+           - [Wood, 1]
+         efficiency:
+           - [El47, 0.2]
+           - [ThBdg, 0.6] #Intended for building heating. Used instead of ThHt to avoid district heating shortcut
+         main_out_ec: El47
+       constraints_general:
+         lifetime_years: 15
+         unit_cap_min: 0
+         TRL:
+           - [2018, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 1400
+         om_fix: 0
+         om_per_cap: 135
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Conv_Elec_Ch4_El47_Chp
+       type: conversion
+       id: T_C_Conv_Elec_Ch4_El47_Chp
+       params:
+         in_ec:
+           - [Ch4, 1]
+         efficiency:
+           - [El47, 0.3]
+           - [ThBdg, 0.6] #Intended for building heating. Used instead of ThHt to avoid district heating shortcut
+         main_out_ec: El47
+       constraints_general:
+         lifetime_years: 15
+         unit_cap_min: 1000
+         TRL:
+           - [2018, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 1000
+         om_fix: 0
+         om_per_cap: 12
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+  ### Steam turbines
+   - tech: #T_C_Conv_Elec_Th400_El13_ThHt_Bp
+       type: conversion
+       id: T_C_Conv_Elec_Th400_El13_ThHt_Bp
+       params:
+         in_ec:
+           - [Th400, 1]
+         efficiency:
+           - [El13, 0.22]
+           - [ThHt, 0.52]
+         main_out_ec: El13
+       constraints_general:
+         lifetime_years: 20
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 3_000_000
+         inv_per_cap: 1000
+         om_fix: 0
+         om_per_cap: 30
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Conv_Elec_Th400_El13_ThPhII_Cond1
+       type: conversion
+       id: T_C_Conv_Elec_Th400_El13_ThPhII_Cond1
+       params:
+         in_ec:
+           - [Th400, 1] #380 GWh (Gevag), 386 GWh (Tegra)
+         efficiency:
+           - [El13, 0.065] #25 GWh (Tegra) -> (2.8 MW)
+           - [ThPhII, 0.67] #255 GWh (Gevag), 260 GWh (Tegra)
+         main_out_ec: El13
+       constraints_general:
+         lifetime_years: 20
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 1_750_000
+         inv_per_cap: 1250 # 3.5 Mio CHF (Tegra)
+         om_fix: 0
+         om_per_cap: 30 #0.084 Mio. CHF / a (Tegra)
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Conv_Elec_Th400_El13_ThLt_Cond2
+       type: conversion
+       id: T_C_Conv_Elec_Th400_El13_ThLt_Cond2
+       params:
+         in_ec:
+           - [ThPhII, 1] #194 GWh
+         efficiency:
+           - [El13, 0.185]
+           - [ThLt, 0.62] #120 GWh #Total 213 GWh ThLt. Rest 93 GWh is produced from main GEVAG incinerator
+         main_out_ec: El13
+       constraints_general:
+         lifetime_years: 20
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 1_750_000
+         inv_per_cap: 1250
+         om_fix: 0
+         om_per_cap: 30
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Conv_Elec_Th400_El13_ThHt70_Cond2Tegra
+       type: conversion
+       id: T_C_Conv_Elec_Th400_El13_ThHt70_Cond2Tegra
+       params:
+         in_ec:
+           - [ThPhII, 1] #260 GWh
+         efficiency:
+           - [El13, 0.165] #43 GWh -> 4.9 MW
+           - [ThHt70, 0.62]
+         main_out_ec: El13
+       constraints_general:
+         lifetime_years: 20
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 1_750_000
+         inv_per_cap: 1250 # 6.1 Mio CHF (Tegra)
+         om_fix: 0
+         om_per_cap: 30 # 0.15 Mio. CHF/a
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+  ### Gevag
+   - tech: #T_C_Conv_Thermal_Msw_Th400
+       type: conversion
+       id: T_C_Conv_Thermal_Msw_Th400
+       params:
+         in_ec:
+           - [Msw, 1] # 436 GWh
+         efficiency:
+           - [Th400, 0.87]
+           - [ThLt, 0.213] # 93 GWh (436 GWh waste). Total ThLt: 213 GWh
+           - [CO2Waste, 0.345] # 0.345 kg/kWh
+         main_out_ec: Th400
+       constraints_general:
+         lifetime_years: 40 #Amortisation time
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 4600
+         om_fix: 0
+         om_per_cap: 112
+         costs_om_per_energy: 0.0645
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Conv_Thermal_Th400_ThPhII
+       type: conversion
+       id: T_C_Conv_Thermal_Th400_ThPhII
+       params:
+         in_ec:
+           - [Th400, 1] #380 GWh
+         efficiency:
+           - [ThPhII, 0.9]
+           - [ThLt, 0.1] #Max. 38 GWh
+         main_out_ec: ThPhII
+       constraints_general:
+         lifetime_years: 40
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 0.00001
+         om_fix: 0
+         om_per_cap: 0
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Conv_Thermal_C12_ThHt
+       type: conversion
+       id: T_C_Conv_Thermal_C12_ThHt
+       params:
+         in_ec:
+           - [C12, 1]
+         efficiency:
+           - [ThHt, 0.9]
+         main_out_ec: ThHt
+       constraints_general:
+         lifetime_years: 20 #Amortisation time
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 0.00001
+         om_fix: 0
+         om_per_cap: 0
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_S_Stor_Waste_Msw
+       type: storage
+       id: T_S_Stor_Waste_Msw
+       params:
+         ec: Msw
+         efficiency_in: 1
+         efficiency_out: 1
+       constraints_general:
+         lifetime_years: 100
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       constraints_storage:
+         min_charging_rate: 0
+         max_charging_rate: 1
+         min_discharging_rate: 0
+         max_discharging_rate: 1
+         min_SoC: 0
+         max_SoC: 1
+         standby_loss: 0
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 0.0001
+         om_fix: 0
+         om_per_cap: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Conv_CarbonCapture_Waste_Amine_2030
+       type: conversion
+       id: T_C_Conv_CarbonCapture_Waste_Amine_2030
+       params:
+         in_ec:
+           - [CO2Waste, 0.56] #kg
+           - [El47, 0.07] #kWh
+           - [ThHt, 0.37] #kWh
+         main_in_ec: CO2Waste
+         efficiency:
+           - [CO2Sys, 0.95] #kg 0.95
+         main_out_ec: CO2Sys
+       constraints_general:
+         lifetime_years: 25
+         unit_cap_min: 18_000 #0.345 kg/kWh 436 GWh * 0.345 kg/kWh -> 150 kt/a -> 19 t/h (8000h) * 0.95 -> 18 t/h
+         TRL:
+           - [2030, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 2790
+         om_fix: 0
+         om_per_cap: 375
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Conv_CarbonCapture_Waste_Hpc_2030
+       type: conversion
+       id: T_C_Conv_CarbonCapture_Waste_Hpc_2030
+       params:
+         in_ec:
+           - [CO2Waste, 0.74] #kg
+           - [El47, 0.24] #kWh
+           - [ThHt, 0.02] #kWh
+         main_in_ec: CO2Waste
+         efficiency:
+           - [CO2Sys, 0.95] #95% capture rate
+         main_out_ec: CO2Sys
+       constraints_general:
+         lifetime_years: 25
+         unit_cap_min: 18_000 #0.345 kg/kWh 436 GWh * 0.345 kg/kWh -> 150 kt/a -> 19 t/h (8000h) * 0.95 -> 18 t/h
+         TRL:
+           - [2030, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 2470
+         om_fix: 0
+         om_per_cap: 300
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Conv_CarbonCapture_CO2Waste_Vent
+       type: conversion
+       id: T_C_Conv_CarbonCapture_CO2Waste_Vent
+       params:
+         in_ec:
+           - [CO2Waste, 1]
+         main_in_ec: CO2Waste
+         efficiency:
+           - [CO2Sys, 0]
+         main_out_ec: CO2Sys
+       constraints_general:
+         lifetime_years: 25
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 1
+         om_fix: 0
+         om_per_cap: 0
+         costs_om_per_energy: 0.0001
+       emissions:
+         inv_per_cap_CO2: 0
+  ### Holcim main techs
+   - tech: #T_C_Conv_Holcim_CaCO3_Clinker
+       type: conversion
+       id: T_C_Conv_Holcim_CaCO3_Clinker
+       params:
+         in_ec:
+           - [CaCO3, 0.54] # 547 kt    547/(1013) = 0.54
+           - [ThCem, 0.41] # 413 GWh   413/(1013) = 0.41
+           - [El13, 0.05]  # 53 GWh    53/(1013) = 0.05
+         main_in_ec: CaCO3
+         efficiency:
+           - [ClinkerSys, 0.82] # 450kt Clinker / 547kt CaCO3
+           - [ThPhII, 0.1] # 72 GWh ThPhII @ 350°C (Isobutanturbine) per 717 kt CaCO3 (ratio from REF)
+           - [ThHt80Flue, 0.013] # 9 GWh for 717 kt CaCO3 (ratio from REF).
+           - [ThHt80Mill, 0.049] # 35 GWh for 717 kt CaCO3 (ratio from REF)
+           - [ThLt, 0.042] # 30 GWh per 717 kt CaCO3 (ratio from REF). -> Can be used in heatpump
+           - [CO2Cement, 0.415] # 505 kg / 1000 kg Clinker. Limestone/Clinker ration: 450/547. -> 505 * 0.82 = 0.415
+         main_out_ec: ClinkerSys
+       constraints_general:
+         lifetime_years: 40
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 3750 #300 Mio investment. 80 kt clinker capacity/h
+         om_fix: 0
+         om_per_cap: 150 #12 Mio
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Conv_Elec_ThPhII_El47_Isobutane
+       type: conversion
+       id: T_C_Conv_Elec_ThPhII_El47_Isobutane
+       params:
+         in_ec:
+           - [ThPhII, 1]
+         efficiency:
+           - [El47, 0.1] #Carnot efficiency: 350 °C -> 180 °C is approx. 0.28
+           - [ThHt, 0.72] #Approximation based on losses of Carnot vs. real system
+         main_out_ec: El47
+       constraints_general:
+         lifetime_years: 20
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 3000
+         om_fix: 0
+         om_per_cap: 100
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Dummy_ClinkerSys_Clinker
+       type: conversion
+       id: T_C_Dummy_ClinkerSys_Clinker
+       params:
+         in_ec:
+           - [ClinkerSys, 1]
+         efficiency:
+           - [Clinker, 1]
+         main_out_ec: Clinker
+       constraints_general:
+         lifetime_years: 100
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 0.00001
+         om_fix: 0
+         om_per_cap: 0
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Dummy_Clinker_ClinkerExp
+       type: conversion
+       id: T_C_Dummy_Clinker_ClinkerExp
+       params:
+         in_ec:
+           - [Clinker, 1]
+         efficiency:
+           - [ClinkerExp, 1]
+         main_out_ec: ClinkerExp
+       constraints_general:
+         lifetime_years: 100
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 0.00001
+         om_fix: 0
+         om_per_cap: 0
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Conv_Thermal_Fluegas_ThHt
+       type: conversion
+       id: T_C_Conv_Thermal_Fluegas_ThHt
+       params:
+         in_ec:
+           - [ThHt80Flue, 1]
+         efficiency:
+           - [ThHt, 1]
+         main_out_ec: ThHt
+       constraints_general:
+         lifetime_years: 30
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 10_000_000
+         inv_per_cap: 0
+         om_fix: 0
+         om_per_cap: 5
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Conv_Thermal_Clinker_ThHt
+       type: conversion
+       id: T_C_Conv_Thermal_Clinker_ThHt
+       params:
+         in_ec:
+           - [Clinker, 1]
+         efficiency:
+           - [ClinkerExp, 1]
+           - [ThHt, 0.008] #5 GWh Clinker cooler step 2. -> 5 GWh/ 590kt Clinker
+         main_out_ec: ThHt
+       constraints_general:
+         lifetime_years: 30
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 10_000_000
+         inv_per_cap: 0
+         om_fix: 0
+         om_per_cap: 5
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Conv_Thermal_ClinkerSys_ThPhII
+       type: conversion
+       id: T_C_Conv_Thermal_ClinkerSys_ThPhII
+       params:
+         in_ec:
+           - [ClinkerSys, 1]
+         efficiency:
+           - [Clinker, 1]
+           - [ThPhII, 0.059] # 35 GWh Clinker cooler step 1. -> 35 GWh/ 590kt Clinker
+         main_out_ec: ThPhII
+       constraints_general:
+         lifetime_years: 30
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 20_000_000
+         inv_per_cap: 0
+         om_fix: 0
+         om_per_cap: 10
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+  ### Holcim fuel conversion
+   - tech: #T_C_Dummy_Thermal_Coal_ThCem
+       type: conversion
+       id: T_C_Dummy_Thermal_Coal_ThCem
+       params:
+         in_ec:
+           - [Coal, 1]
+         efficiency:
+           - [ThCem, 1]
+           - [CO2Cement, 0.334]
+         main_out_ec: ThCem
+       constraints_general:
+         lifetime_years: 100
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 0.0000001
+         om_fix: 0
+         om_per_cap: 0
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Dummy_Thermal_H2_ThCem
+       type: conversion
+       id: T_C_Dummy_Thermal_H2_ThCem
+       params:
+         in_ec:
+           - [H2, 1]
+         efficiency:
+           - [ThCem, 1]
+         main_out_ec: ThCem
+       constraints_general:
+         lifetime_years: 100
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 0.0000001
+         om_fix: 0
+         om_per_cap: 0
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Dummy_Thermal_Ch4_ThCem
+       type: conversion
+       id: T_C_Dummy_Thermal_Ch4_ThCem
+       params:
+         in_ec:
+           - [Ch4, 1]
+         efficiency:
+           - [ThCem, 1]
+           - [CO2Cement, 0.202]
+         main_out_ec: ThCem
+       constraints_general:
+         lifetime_years: 100
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 0.0000001
+         om_fix: 0
+         om_per_cap: 0
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Dummy_Thermal_Csw_ThCem
+       type: conversion
+       id: T_C_Dummy_Thermal_Csw_ThCem
+       params:
+         in_ec:
+           - [Csw, 1]
+         efficiency:
+           - [ThCem, 1]
+           - [CO2Cement, 0.33]
+         main_out_ec: ThCem
+       constraints_general:
+         lifetime_years: 100
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 0.00001
+         om_fix: 0
+         om_per_cap: 0
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Dummy_Thermal_Sbf_ThCem
+       type: conversion
+       id: T_C_Dummy_Thermal_Sbf_ThCem
+       params:
+         in_ec:
+           - [Sbf, 1]
+         efficiency:
+           - [ThCem, 1]
+           - [CO2Cement, 0.395]
+         main_out_ec: ThCem
+       constraints_general:
+         lifetime_years: 100
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 0.00001
+         om_fix: 0
+         om_per_cap: 0
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+  ### Holcim CO2 capture
+  #  - tech: #T_C_Conv_CarbonCapture_Cement_Amine_2030
+  #      type: conversion
+  #      id: T_C_Conv_CarbonCapture_Cement_Amine_2030
+  #      params:
+  #        in_ec:
+  #          - [CO2Cement, 0.56] #kg
+  #          - [El47, 0.07] #kWh
+  #          - [ThHt, 0.37] #kWh
+  #        main_in_ec: CO2Cement
+  #        efficiency:
+  #          - [CO2Sys, 0.95] #kg 0.95
+  #        main_out_ec: CO2Sys
+  #      constraints_general:
+  #        lifetime_years: 25
+  #        unit_cap_min: 40_000 #Value from Robin
+  #        TRL:
+  #          - [2030, 11]
+  #      costs:
+  #        interest_rate_ref: low
+  #        inv_fix: 0
+  #        inv_per_cap: 2790
+  #        om_fix: 0
+  #        om_per_cap: 375
+  #        costs_om_per_energy: 0
+  #      emissions:
+  #        inv_per_cap_CO2: 0
+   - tech: #T_C_Conv_CarbonCapture_Cement_Hpc_2030
+       type: conversion
+       id: T_C_Conv_CarbonCapture_Cement_Hpc_2030
+       params:
+         in_ec:
+           - [CO2Cement, 0.74] #kg
+           - [El47, 0.24] #kWh
+           - [ThHt, 0.02] #kWh
+         main_in_ec: CO2Cement
+         efficiency:
+           - [CO2Sys, 0.95] #95% capture rate
+         main_out_ec: CO2Sys
+       constraints_general:
+         lifetime_years: 25
+         unit_cap_min: 40_000 #Value from Robin
+         TRL:
+           - [2030, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 2470
+         om_fix: 0
+         om_per_cap: 300
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+  #  - tech: #T_C_Conv_CarbonCapture_Cement_MeaAmine_2030
+  #      type: conversion
+  #      id: T_C_Conv_CarbonCapture_Cement_MeaAmine_2030
+  #      params:
+  #        in_ec:
+  #          - [CO2Cement, 0.45] # Obrist: 505kg geogen CO2 per 1000kg Clinker. 615kg per 1000kg Clinker + fossil fuel average. 850 kg CO2 all fuels.     850 kgCO2/(850+123+932) = 0.45
+  #          - [El47, 0.06] #kWh Paper Obrist: 123 kWh/tClinker (input based)                                                   123 kWh/(850+123+932) = 0.06
+  #          - [ThHt, 0.49] #kWh Paper Obrist: 932 kWh/tClinker (input based)                                                   932 kWh/(850+123+932) = 0.49
+  #        main_in_ec: CO2Cement
+  #        efficiency:
+  #          - [CO2Sys, 0.90] #Obrist: 90% capture rate
+  #        main_out_ec: CO2Sys
+  #      constraints_general:
+  #        lifetime_years: 25
+  #        unit_cap_min: 0 # 40_000 #450kt Clinker 2050 0.85 kg CO2 / kg Clinker -> 383 kt CO2/a. Cf: 0.86. -> Capture capacity. 45_900 kg/h. Set min. to. 40_000 kg/h. Geogen only: Approx. 27kt/h
+  #        TRL:
+  #          - [2030, 11]
+  #      costs:
+  #        interest_rate_ref: low
+  #        inv_fix: 0
+  #        inv_per_cap: 1670 #Paper Gardarsdottir
+  #        om_fix: 0
+  #        om_per_cap: 384 #Paper Gardarsdottir
+  #        costs_om_per_energy: 0
+  #      emissions:
+  #        inv_per_cap_CO2: 0
+   - tech: #T_C_Conv_CarbonCapture_CO2Cement_Vent
+       type: conversion
+       id: T_C_Conv_CarbonCapture_CO2Cement_Vent
+       params:
+         in_ec:
+           - [CO2Cement, 1]
+         efficiency:
+           - [CO2Cement, 0]
+         main_out_ec: CO2Cement
+       constraints_general:
+         lifetime_years: 25
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 1
+         om_fix: 0
+         om_per_cap: 0
+         costs_om_per_energy: 0.00001
+       emissions:
+         inv_per_cap_CO2: 0
+  ### Tegra
+   - tech: #T_C_Conv_Elec_Wood_Th400
+       type: conversion
+       id: T_C_Conv_Elec_Wood_Th400
+       params:
+         in_ec:
+           - [Wood, 1]
+         efficiency:
+           - [Th400, 0.87] #REF: 67 MW
+           - [CO2Wood, 0.395]
+         main_out_ec: Th400
+       constraints_general:
+         lifetime_years: 20
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 2107 # Reduce by 9.6 Mio CHF for turbines. REF: 150 Mio CHF.
+         om_fix: 0
+         om_per_cap: 246 #Reduce by 0.23 Mio. CHF /a for turbines. (67 MW * 0.25 CHF/MW = 16.75 Mio./a). (16.75 - 0.23)/67 = 246
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Conv_CarbonCapture_Wood_Amine_2030
+       type: conversion
+       id: T_C_Conv_CarbonCapture_Wood_Amine_2030
+       params:
+         in_ec:
+           - [CO2Wood, 0.56] #kg
+           - [El47, 0.07] #kWh
+           - [ThHt, 0.37] #kWh
+         main_in_ec: CO2Wood
+         efficiency:
+           - [CO2Sys, 0.95] #
+         main_out_ec: CO2Sys
+       constraints_general:
+         lifetime_years: 25
+         unit_cap_min: 19_000 #0.395 kg/kWh * (min approx.) 400 GWh -> 158 kt/a -> 20 t/h (8000h) * 0.95 -> 19 t/h
+         TRL:
+           - [2030, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 2790
+         om_fix: 0
+         om_per_cap: 375
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Conv_CarbonCapture_Wood_Hpc_2030
+       type: conversion
+       id: T_C_Conv_CarbonCapture_Wood_Hpc_2030
+       params:
+         in_ec:
+           - [CO2Wood, 0.74] #kg
+           - [El47, 0.24] #kWh
+           - [ThHt, 0.02] #kWh
+         main_in_ec: CO2Wood
+         efficiency:
+           - [CO2Sys, 0.95]
+         main_out_ec: CO2Sys
+       constraints_general:
+         lifetime_years: 25
+         unit_cap_min: 19_000 #0.395 kg/kWh * (min approx.) 400 GWh -> 158 kt/a -> 20 t/h (8000h) * 0.95 -> 19 t/h
+         TRL:
+           - [2030, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 2470
+         om_fix: 0
+         om_per_cap: 300
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Conv_CarbonCapture_CO2Wood_Vent
+       type: conversion
+       id: T_C_Conv_CarbonCapture_CO2Wood_Vent
+       params:
+         in_ec:
+           - [CO2Wood, 1]
+         main_in_ec: CO2Wood
+         efficiency:
+           - [CO2Sys, 0]
+         main_out_ec: CO2Sys
+       constraints_general:
+         lifetime_years: 25
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 1
+         om_fix: 0
+         om_per_cap: 0
+         costs_om_per_energy: 0.0001
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Conv_Thermal_ThLt_ThAmbWater
+       type: conversion
+       id: T_C_Conv_Thermal_ThLt_ThAmbWater
+       params:
+         in_ec:
+           - [ThLt, 1]
+         efficiency:
+           - [ThAmbWater, 0]
+         main_out_ec: ThAmbWater
+       constraints_general:
+         lifetime_years: 100
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 0.000001
+         om_fix: 0
+         om_per_cap: 0
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+  ### Ems
+   - tech: #T_C_Conv_Ems
+       type: conversion
+       id: T_C_Conv_Ems
+       params:
+         in_ec:
+           - [El47, 0.50]
+           - [ThPhII, 0.37]
+           - [PhFuel, 0.13]
+         main_in_ec: El47
+         efficiency:
+           - [EmsProducts, 1.136] #1.76 kWh/kg, 0.568 kg/kWh -> 0.568/0.5 -> 1.136
+           - [ThAmbWater, 1.216] #0.608/0.5 = 1.216. 164 GWh ThAmbWater / 135 GWh Electricity
+         main_out_ec: EmsProducts
+       constraints_general:
+         lifetime_years: 20
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 2000
+         om_fix: 0
+         om_per_cap: 250
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+  ### Solar
+   - tech: #T_C_Sol_Solar_Pv_Roof_2050
+       type: conversion
+       subtype: solar
+       id: T_C_Sol_Solar_Pv_Roof_2050
+       params:
+         in_ec:
+           - [SolGroup, 1]
+         efficiency:
+           - [ElBdg, 0.2]
+         main_out_ec: ElBdg
+       constraints_general:
+         lifetime_years: 25
+         unit_cap_min: 0
+         TRL:
+           - [2050, 11]
+       constraints_solar:
+         energy_density: 1
+         irr_norm: 1
+         curtailment_factor: 1
+       costs:
+         interest_rate_ref: high
+         inv_fix: 0
+         inv_per_cap: 210
+         om_fix: 0
+         om_per_cap: 3.2
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Sol_Solar_Thermal_Roof_2050
+       type: conversion
+       subtype: solar
+       id: T_C_Sol_Solar_Thermal_Roof_2050
+       params:
+         in_ec:
+           - [SolGroup, 1]
+         efficiency:
+           - [ThBdg, 0.75]
+         main_out_ec: ThBdg
+       constraints_general:
+         lifetime_years: 40
+         unit_cap_min: 0
+         TRL:
+           - [2050, 11]
+       constraints_solar:
+         energy_density: 1
+         irr_norm: 1
+         curtailment_factor: 1
+       costs:
+         interest_rate_ref: high
+         inv_fix: 0
+         inv_per_cap: 407
+         om_fix: 0
+         om_per_cap: 0.35
+       emissions:
+         inv_per_cap_CO2: 0
+  ### Carbon Dioxide
+   - tech: #T_C_Conv_CarbonDioxide_CO2Sys_Vent
+       type: conversion
+       id: T_C_Conv_CarbonDioxide_CO2Sys_Vent
+       params:
+         in_ec:
+           - [CO2Sys, 1]
+         efficiency:
+           - [CO2Sys, 0]
+         main_out_ec: CO2Sys
+       constraints_general:
+         lifetime_years: 100
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 1
+         om_fix: 0
+         om_per_cap: 1
+         costs_om_per_energy: 0.0001
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Net_CarbonDioxide_CO2Sys_CO2Exp
+       type: conversion
+       id: T_C_Net_CarbonDioxide_CO2Sys_CO2Exp
+       params:
+         in_ec:
+           - [CO2Sys, 1]
+         main_in_ec: CO2Sys
+         efficiency:
+           - [CO2Exp, 1]
+         main_out_ec: CO2Exp
+       constraints_general:
+         lifetime_years: 25
+         unit_cap_min: 0
+         TRL:
+           - [2030, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 3300 #CHF/kg/h transport capacity
+         om_fix: 0
+         om_per_cap: 230
+         costs_om_per_energy: 0 #20CHF/t export cost accounted for in export
+       emissions:
+         inv_per_cap_CO2: 0
+  ### Thermal conversion
+   - tech: #T_C_Conv_Thermal_ThPhII_ThHt
+       type: conversion
+       id: T_C_Conv_Thermal_ThPhII_ThHt
+       params:
+         in_ec:
+           - [ThPhII, 1]
+         main_in_ec: ThPhII
+         efficiency:
+           - [ThHt, 0.95]
+         main_out_ec: ThHt
+       constraints_general:
+         lifetime_years: 100
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 500
+         om_fix: 0
+         om_per_cap: 10
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Conv_Thermal_ThPhII_ThHt_Gevag
+       type: conversion
+       id: T_C_Conv_Thermal_ThPhII_ThHt_Gevag
+       params:
+         in_ec:
+           - [ThPhII, 1]
+         main_in_ec: ThPhII
+         efficiency:
+           - [ThHt, 1]
+         main_out_ec: ThHt
+       constraints_general:
+         lifetime_years: 100
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 0.0001
+         om_fix: 0
+         om_per_cap: 0
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+  ### Thermal vents
+   - tech: #T_C_Conv_Thermal_ThAmbWater_Vent
+       type: conversion
+       id: T_C_Conv_Thermal_ThAmbWater_Vent
+       params:
+         in_ec:
+           - [ThAmbWater, 1]
+         efficiency:
+           - [ThAmbWater, 0]
+       constraints_general:
+         lifetime_years: 100
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 0.01
+         om_fix: 0
+         om_per_cap: 0.0001
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Conv_Thermal_ThLt_Vent
+       type: conversion
+       id: T_C_Conv_Thermal_ThLt_Vent
+       params:
+         in_ec:
+           - [ThLt, 1]
+         efficiency:
+           - [ThLt, 0]
+         main_out_ec: ThLt
+       constraints_general:
+         lifetime_years: 100
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 0.001
+         om_fix: 0
+         om_per_cap: 0
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Conv_Thermal_ThHt_Vent
+       type: conversion
+       id: T_C_Conv_Thermal_ThHt_Vent
+       params:
+         in_ec:
+           - [ThHt, 1]
+         efficiency:
+           - [ThLt, 0]
+         main_out_ec: ThLt
+       constraints_general:
+         lifetime_years: 100
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 0.000001
+         om_fix: 0
+         om_per_cap: 0
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Conv_Thermal_ThHt80Flue_Vent
+       type: conversion
+       id: T_C_Conv_Thermal_ThHt80Flue_Vent
+       params:
+         in_ec:
+           - [ThHt80Flue, 1]
+         efficiency:
+           - [ThLt, 0]
+         main_out_ec: ThLt
+       constraints_general:
+         lifetime_years: 100
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 0.00001
+         om_fix: 0
+         om_per_cap: 0
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Conv_Thermal_ThHt70_Vent
+       type: conversion
+       id: T_C_Conv_Thermal_ThHt70_Vent
+       params:
+         in_ec:
+           - [ThHt70, 1]
+         efficiency:
+           - [ThLt, 0]
+         main_out_ec: ThLt
+       constraints_general:
+         lifetime_years: 100
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 0.000001
+         om_fix: 0
+         om_per_cap: 0
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Conv_Thermal_ThPhI_Vent
+       type: conversion
+       id: T_C_Conv_Thermal_ThPhI_Vent
+       params:
+         in_ec:
+           - [ThPhI, 1]
+         efficiency:
+           - [ThLt, 0]
+         main_out_ec: ThLt
+       constraints_general:
+         lifetime_years: 100
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 0.000001
+         om_fix: 0
+         om_per_cap: 0
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Conv_Thermal_ThPhII_Vent
+       type: conversion
+       id: T_C_Conv_Thermal_ThPhII_Vent
+       params:
+         in_ec:
+           - [ThPhII, 1]
+         efficiency:
+           - [ThLt, 0]
+         main_out_ec: ThLt
+       constraints_general:
+         lifetime_years: 100
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 0.000001
+         om_fix: 0
+         om_per_cap: 0
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+  ### High temperature and process heat
+   - tech: #T_C_Conv_Thermal_H2_ThPhII
+       type: conversion
+       id: T_C_Conv_Thermal_H2_ThPhII
+       params:
+         in_ec:
+           - [H2, 1]
+         efficiency:
+           - [ThPhII, 0.9]
+         main_out_ec: ThPhII
+       constraints_general:
+         lifetime_years: 20 #Amortisation time
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 765
+         om_fix: 0
+         om_per_cap: 1.9
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Conv_Thermal_El47_ThPhII
+       type: conversion
+       id: T_C_Conv_Thermal_El47_ThPhII
+       params:
+         in_ec:
+           - [El47, 1]
+         efficiency:
+           - [ThPhII, 0.85]
+         main_out_ec: ThPhII
+       constraints_general:
+         lifetime_years: 30
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 275
+         om_fix: 0
+         om_per_cap: 1.4
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Conv_Thermal_Ch4_ThPhII
+       type: conversion
+       id: T_C_Conv_Thermal_Ch4_ThPhII
+       params:
+         in_ec:
+           - [Ch4, 1]
+         efficiency:
+           - [ThPhII, 0.9]
+         main_out_ec: ThPhII
+       constraints_general:
+         lifetime_years: 20 #Amortisation time
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 300
+         om_fix: 0
+         om_per_cap: 9
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Conv_Thermal_Wood_ThPhII
+       type: conversion
+       id: T_C_Conv_Thermal_Wood_ThPhII
+       params:
+         in_ec:
+           - [Wood, 1]
+         efficiency:
+           - [ThPhII, 0.85]
+         main_out_ec: ThPhII
+       constraints_general:
+         lifetime_years: 25
+         unit_cap_min: 0
+         TRL:
+           - [2018, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 500
+         om_fix: 0
+         om_per_cap: 15
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Conv_Thermal_H2_ThPhI
+       type: conversion
+       id: T_C_Conv_Thermal_H2_ThPhI
+       params:
+         in_ec:
+           - [H2, 1]
+         efficiency:
+           - [ThPhI, 0.95]
+         main_out_ec: ThPhI
+       constraints_general:
+         lifetime_years: 20 #Amortisation time
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 765
+         om_fix: 0
+         om_per_cap: 1.9
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Conv_Thermal_Ch4_ThPhI
+       type: conversion
+       id: T_C_Conv_Thermal_Ch4_ThPhI
+       params:
+         in_ec:
+           - [Ch4, 1]
+         efficiency:
+           - [ThPhI, 0.95]
+         main_out_ec: ThPhI
+       constraints_general:
+         lifetime_years: 20 #Amortisation time
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 300
+         om_fix: 0
+         om_per_cap: 9
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Conv_Thermal_Wood_ThPhI
+       type: conversion
+       id: T_C_Conv_Thermal_Wood_ThPhI
+       params:
+         in_ec:
+           - [Wood, 1]
+         efficiency:
+           - [ThPhI, 0.90]
+         main_out_ec: ThPhI
+       constraints_general:
+         lifetime_years: 25
+         unit_cap_min: 0
+         TRL:
+           - [2018, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 500
+         om_fix: 0
+         om_per_cap: 15
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Conv_Thermal_H2_ThHt
+       type: conversion
+       id: T_C_Conv_Thermal_H2_ThHt
+       params:
+         in_ec:
+           - [H2, 1]
+         efficiency:
+           - [ThHt, 0.95]
+         main_out_ec: ThHt
+       constraints_general:
+         lifetime_years: 20 #Amortisation time
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 765
+         om_fix: 0
+         om_per_cap: 1.9
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Conv_Thermal_Ch4_ThHt
+       type: conversion
+       id: T_C_Conv_Thermal_Ch4_ThHt
+       params:
+         in_ec:
+           - [Ch4, 1]
+         efficiency:
+           - [ThHt, 0.95]
+         main_out_ec: ThHt
+       constraints_general:
+         lifetime_years: 20 #Amortisation time
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 300
+         om_fix: 0
+         om_per_cap: 9
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+  ### Industrial heat pumps
+   - tech: #T_C_Conv_Thermal_El47_ThAmb_ThPhI
+       type: conversion
+       id: T_C_Conv_Thermal_El47_ThAmb_ThPhI
+       params:
+         in_ec:
+           - [El47, 0.66]
+           - [ThAmb, 0.34]
+         main_in_ec: El47
+         efficiency:
+           - [ThPhI, 1.5]
+         main_out_ec: ThPhI
+       constraints_general:
+         lifetime_years: 25
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 2484
+         om_fix: 0
+         om_per_cap: 75
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Conv_Thermal_El47_ThAmb_ThHt
+       type: conversion
+       id: T_C_Conv_Thermal_El47_ThAmb_ThHt
+       params:
+         in_ec:
+           - [El47, 0.49]
+           - [ThAmb, 0.51]
+         main_in_ec: El47
+         efficiency:
+           - [ThHt, 2.1]
+         main_out_ec: ThHt
+       constraints_general:
+         lifetime_years: 25
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 1477
+         om_fix: 0
+         om_per_cap: 44
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Conv_Thermal_El47_ThLt_ThHt
+       type: conversion
+       id: T_C_Conv_Thermal_El47_ThLt_ThHt
+       params:
+         in_ec:
+           - [El47, 0.37]
+           - [ThLt, 0.63]
+         main_in_ec: El47
+         efficiency:
+           - [ThHt, 2.7]
+         main_out_ec: ThHt
+       constraints_general:
+         lifetime_years: 25
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 1081
+         om_fix: 0
+         om_per_cap: 32
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Conv_Thermal_El47_ThLt_ThHt70
+       type: conversion
+       id: T_C_Conv_Thermal_El47_ThLt_ThHt70
+       params:
+         in_ec:
+           - [El47, 0.16]
+           - [ThLt, 0.84]
+         main_in_ec: El47
+         efficiency:
+           - [ThHt70, 6.3]
+         main_out_ec: ThHt70
+       constraints_general:
+         lifetime_years: 25
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 350
+         om_fix: 0
+         om_per_cap: 10
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Conv_Thermal_El47_ThHt80Mill_ThHt
+       type: conversion
+       id: T_C_Conv_Thermal_El47_ThHt80Mill_ThHt
+       params:
+         in_ec:
+           - [El47, 0.19]
+           - [ThHt80Mill, 0.81]
+         main_in_ec: El47
+         efficiency:
+           - [ThHt, 5.4]
+         main_out_ec: ThHt
+       constraints_general:
+         lifetime_years: 25
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 487
+         om_fix: 0
+         om_per_cap: 15
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Conv_Thermal_El47_ThLt55_ThHt70
+       type: conversion
+       id: T_C_Conv_Thermal_El47_ThLt55_ThHt70
+       params:
+         in_ec:
+           - [El47, 0.08]
+           - [ThLt55, 0.92]
+         main_in_ec: El47
+         efficiency:
+           - [ThHt70, 12.6]
+         main_out_ec: ThHt70
+       constraints_general:
+         lifetime_years: 25
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 158
+         om_fix: 0
+         om_per_cap: 5
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Conv_Thermal_El47_ThHt70_ThHt
+       type: conversion
+       id: T_C_Conv_Thermal_El47_ThHt70_ThHt
+       params:
+         in_ec:
+           - [El47, 0.23]
+           - [ThHt70, 0.77]
+         main_in_ec: El47
+         efficiency:
+           - [ThHt, 4.3]
+         main_out_ec: ThHt
+       constraints_general:
+         lifetime_years: 25
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 629
+         om_fix: 0
+         om_per_cap: 19
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Conv_Thermal_El47_ThAmbWater_ThLt55
+       type: conversion
+       id: T_C_Conv_Thermal_El47_ThAmbWater_ThLt55
+       params:
+         in_ec:
+           - [El47, 0.18]
+           - [ThAmbWater, 0.82]
+         main_in_ec: El47
+         efficiency:
+           - [ThLt55, 5.5]
+         main_out_ec: ThLt55
+       constraints_general:
+         lifetime_years: 25
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 390
+         om_fix: 0
+         om_per_cap: 12
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+  ### Thermal storage
+   - tech: #T_S_Stor_Thermal_ThHt
+       type: storage
+       id: T_S_Stor_Thermal_ThHt
+       params:
+         ec: ThHt
+         efficiency_in: 0.95
+         efficiency_out: 0.95
+       constraints_general:
+         lifetime_years: 40
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       constraints_storage:
+         min_charging_rate: 0
+         max_charging_rate: 1
+         min_discharging_rate: 0
+         max_discharging_rate: 1
+         min_SoC: 0
+         max_SoC: 1
+         standby_loss: 0
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 5
+         om_fix: 0
+         om_per_cap: 1
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_S_Stor_Thermal_ThHt70
+       type: storage
+       id: T_S_Stor_Thermal_ThHt70
+       params:
+         ec: ThHt70
+         efficiency_in: 0.95
+         efficiency_out: 0.95
+       constraints_general:
+         lifetime_years: 40
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       constraints_storage:
+         min_charging_rate: 0
+         max_charging_rate: 1
+         min_discharging_rate: 0
+         max_discharging_rate: 1
+         min_SoC: 0
+         max_SoC: 1
+         standby_loss: 0
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 5
+         om_fix: 0
+         om_per_cap: 1
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_S_Stor_Thermal_ThPhII
+       type: storage
+       id: T_S_Stor_Thermal_ThPhII
+       params:
+         ec: ThPhII
+         efficiency_in: 0.95
+         efficiency_out: 0.95
+       constraints_general:
+         lifetime_years: 40
+         unit_cap_min: 0
+         TRL:
+           - [2020, 11]
+       constraints_storage:
+         min_charging_rate: 0
+         max_charging_rate: 1
+         min_discharging_rate: 0
+         max_discharging_rate: 1
+         min_SoC: 0
+         max_SoC: 1
+         standby_loss: 0
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 100 # Assumption
+         om_fix: 0
+         om_per_cap: 1 #Assumption
+       emissions:
+         inv_per_cap_CO2: 0
+  ### Hydrogen
+   - tech: #T_S_Stor_Hydrogen_Compressed
+       type: storage
+       id: T_S_Stor_Hydrogen_Compressed
+       params:
+         ec: H2
+         efficiency_in: 0.94
+         efficiency_out: 0.94
+       constraints_general:
+         lifetime_years: 30
+         unit_cap_min: 0
+         TRL:
+           - [2030, 11]
+       constraints_storage:
+         min_charging_rate: 0
+         max_charging_rate: 1
+         min_discharging_rate: 0
+         max_discharging_rate: 1
+         min_SoC: 0
+         max_SoC: 1
+         standby_loss: 0
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 20 # https://doi.org/10.1093/ce/zkac083
+         om_fix: 0
+         om_per_cap: 0.5
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Conv_Hydrogen_El47_H2
+       type: conversion
+       id: T_C_Conv_Hydrogen_El47_H2
+       params:
+         in_ec:
+           - [El47, 1]
+         efficiency:
+           - [H2, 0.75]
+         main_out_ec: H2
+       constraints_general:
+         lifetime_years: 25
+         unit_cap_min: 0
+         TRL:
+           - [2050, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 900
+         om_fix: 0
+         om_per_cap: 27
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Conv_Elec_H2_El47_ThHt
+       type: conversion
+       id: T_C_Conv_Elec_H2_El47_ThHt
+       params:
+         in_ec:
+           - [H2, 1]
+         efficiency:
+           - [El47, 0.65]
+           - [ThHt, 0.10] #Estimation
+         main_out_ec: El47
+       constraints_general:
+         lifetime_years: 23
+         unit_cap_min: 0
+         unit_cap_max: 1000 #kWh/h industrial
+         TRL:
+           - [2050, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 3000
+         om_fix: 0
+         om_per_cap: 45
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+   - tech: #T_C_Conv_Elec_H2_El47_ThBdg
+       type: conversion
+       id: T_C_Conv_Elec_H2_El47_ThBdg
+       params:
+         in_ec:
+           - [H2, 1]
+         efficiency:
+           - [El47, 0.65]
+           - [ThBdg, 0.15] #Estimation
+         main_out_ec: El47
+       constraints_general:
+         lifetime_years: 23
+         unit_cap_min: 0
+         unit_cap_max: 100 #kWh/h resdidential
+         TRL:
+           - [2050, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 3000
+         om_fix: 0
+         om_per_cap: 45
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
+ ### SAF
+   - tech: #T_C_Conv_Saf_FischerTropsch_H2_C12Saf
+       type: conversion
+       id: T_C_Conv_Saf_FischerTropsch_H2_C12Saf
+       params:
+         in_ec:
+           - [H2, 0.78]        #1189 GWh/(1524) = 0.78
+           - [CO2Sys, 0.17]    #262 kt/(1524) = 0.17
+           - [El47, 0.05]      #73 GWh/(1524) = 0.05
+         main_in_ec: H2
+         efficiency:
+           - [C12Saf, 0.814]   #11.94 kWh C12Saf/ 14.6652 kWh H2 = 0.814
+         main_out_ec: C12Saf
+       constraints_general:
+         lifetime_years: 30
+         unit_cap_min: 0
+         TRL:
+           - [2050, 11]
+       costs:
+         interest_rate_ref: low
+         inv_fix: 0
+         inv_per_cap: 3000
+         om_fix: 0
+         om_per_cap: 75
+         costs_om_per_energy: 0
+       emissions:
+         inv_per_cap_CO2: 0
